@@ -5,6 +5,8 @@ skidata-library
 
 Integrate SkiData with your projects.
 
+/!\ This package is currently in developpment /!\
+
 ---
 
 ## Installation
