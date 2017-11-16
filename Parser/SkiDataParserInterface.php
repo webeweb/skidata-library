@@ -22,11 +22,11 @@ interface SkiDataParserInterface {
 	/**
 	 * Date format.
 	 */
-	const DATE_FORMAT = 'Ymd';
+	const DATE_FORMAT = "Ymd";
 
 	/**
 	 * Date/time format.
 	 */
-	const DATETIME_FORMAT = 'Ymd His';
+	const DATETIME_FORMAT = "Ymd His";
 
 }
