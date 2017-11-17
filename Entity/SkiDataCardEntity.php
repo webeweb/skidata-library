@@ -327,7 +327,7 @@ final class SkiDataCardEntity {
 	 *
 	 * @return boolean Returns the is neutral.
 	 */
-	public function getIsNeutral() {
+	public function getNeutral() {
 		return $this->isNeutral;
 	}
 
@@ -609,7 +609,7 @@ final class SkiDataCardEntity {
 	 * @param boolean $isNeutral The is neutral.
 	 * @return SkiDataCardEntity Returns the SkiData card entity.
 	 */
-	public function setIsNeutral($isNeutral) {
+	public function setNeutral($isNeutral) {
 		$this->isNeutral = $isNeutral;
 		return $this;
 	}

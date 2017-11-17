@@ -43,7 +43,7 @@ final class SkiDataCardParserTest extends PHPUnit_Framework_TestCase {
 		$obj->setProductionState(2);
 		$obj->setReasonProduction(0);
 		$obj->setProductionCounter(3412);
-		$obj->setIsNeutral(false);
+		$obj->setNeutral(false);
 		$obj->setRetainTicketEntry(false);
 		$obj->setEntryBarrierClosed(true);
 		$obj->setExitBarrierClosed(true);
@@ -87,7 +87,7 @@ final class SkiDataCardParserTest extends PHPUnit_Framework_TestCase {
 		$this->assertEquals(2, $res->getProductionState());
 		$this->assertEquals(0, $res->getReasonProduction());
 		$this->assertEquals(3412, $res->getProductionCounter());
-		$this->assertEquals(false, $res->getIsNeutral());
+		$this->assertEquals(false, $res->getNeutral());
 		$this->assertEquals(false, $res->getRetainTicketEntry());
 		$this->assertEquals(true, $res->getEntryBarrierClosed());
 		$this->assertEquals(true, $res->getExitBarrierClosed());

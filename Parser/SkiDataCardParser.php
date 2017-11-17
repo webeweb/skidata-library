@@ -51,7 +51,7 @@ final class SkiDataCardParser extends AbstractSkiDataParser {
 		$output[]	 = $this->encodeInteger($entity->getProductionState(), 1);
 		$output[]	 = $this->encodeInteger($entity->getReasonProduction(), 1);
 		$output[]	 = $this->encodeInteger($entity->getProductionCounter(), 4);
-		$output[]	 = $this->encodeBoolean($entity->getIsNeutral());
+		$output[]	 = $this->encodeBoolean($entity->getNeutral());
 		$output[]	 = $this->encodeBoolean($entity->getRetainTicketEntry());
 		$output[]	 = $this->encodeBoolean($entity->getEntryBarrierClosed());
 		$output[]	 = $this->encodeBoolean($entity->getExitBarrierClosed());
@@ -100,7 +100,7 @@ final class SkiDataCardParser extends AbstractSkiDataParser {
 		$entity->setProductionState($this->decodeInteger($data[$i++]));
 		$entity->setReasonProduction($this->decodeInteger($data[$i++]));
 		$entity->setProductionCounter($this->decodeInteger($data[$i++]));
-		$entity->setIsNeutral(BooleanUtility::parseString($data[$i++]));
+		$entity->setNeutral(BooleanUtility::parseString($data[$i++]));
 		$entity->setRetainTicketEntry(BooleanUtility::parseString($data[$i++]));
 		$entity->setEntryBarrierClosed(BooleanUtility::parseString($data[$i++]));
 		$entity->setExitBarrierClosed(BooleanUtility::parseString($data[$i++]));
