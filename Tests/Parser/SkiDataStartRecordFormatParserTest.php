@@ -16,8 +16,10 @@
 namespace WBW\Library\SkiData\Tests\Parser;
 
 use DateTime;
+use Exception;
 use PHPUnit_Framework_TestCase;
 use WBW\Library\SkiData\Entity\SkiDataStartRecordFormatEntity;
+use WBW\Library\SkiData\Exception\SkiDataTooLongDataException;
 use WBW\Library\SkiData\Parser\SkiDataStartRecordFormatParser;
 
 /**
@@ -28,6 +30,22 @@ use WBW\Library\SkiData\Parser\SkiDataStartRecordFormatParser;
  * @final
  */
 final class SkiDataStartRecordFormatParserTest extends PHPUnit_Framework_TestCase {
+
+	/**
+	 * Tests teh __construct() method.
+	 *
+	 * @return void
+	 */
+	public function testConstruct() {
+
+		$obj = new SkiDataStartRecordFormatParser();
+
+		$this->assertEquals(null, $obj->getStartRecordFormat());
+
+		$res = new SkiDataStartRecordFormatEntity();
+		$obj->setStartRecordFormat($res);
+		$this->assertEquals($res, $obj->getStartRecordFormat());
+	}
 
 	/**
 	 * Tests the parseEntity() method.
@@ -45,6 +63,25 @@ final class SkiDataStartRecordFormatParserTest extends PHPUnit_Framework_TestCas
 
 		$res = '190000;0202747;20170921;00018;"EUR"';
 		$this->assertEquals($res, (new SkiDataStartRecordFormatParser())->parseEntity($obj));
+
+		try {
+			$obj->setVersionRecordStructure(2000000);
+			(new SkiDataStartRecordFormatParser())->parseEntity($obj);
+		} catch (Exception $ex) {
+
+			$this->assertInstanceOf(SkiDataTooLongDataException::class, $ex);
+			$this->assertEquals("The data \"2000000\" exceeds the length \"6\" allowed", $ex->getMessage());
+		}
+
+		try {
+			$obj->setVersionRecordStructure(190000);
+			$obj->setCurrency("Exception");
+			(new SkiDataStartRecordFormatParser())->parseEntity($obj);
+		} catch (Exception $ex) {
+
+			$this->assertInstanceOf(SkiDataTooLongDataException::class, $ex);
+			$this->assertEquals("The data \"Exception\" exceeds the length \"6\" allowed", $ex->getMessage());
+		}
 	}
 
 	/**
