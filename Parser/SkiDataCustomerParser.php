@@ -11,6 +11,7 @@
 
 namespace WBW\Library\SkiData\Parser;
 
+use WBW\Library\Core\Utility\BooleanUtility;
 use WBW\Library\SkiData\Entity\SkiDataCustomerEntity;
 
 /**
@@ -110,18 +111,18 @@ final class SkiDataCustomerParser extends AbstractSkiDataParser {
 		$entity->setMaximumLevel($this->decodeInteger($data[$i++]));
 		$entity->setRemarks($this->decodeString($data[$i++]));
 		$entity->setDatetimeLastModification($this->decodeDateTime($data[$i++]));
-		$entity->setBlocked($this->decodeBoolean($data[$i++]));
+		$entity->setBlocked(BooleanUtility::parseString($data[$i++]));
 		$entity->setBlockedDate($this->decodeDate($data[$i++]));
-		$entity->setDeletedRecord($this->decodeBoolean($data[$i++]));
-		$entity->setTicketReturnAllowed($this->decodeBoolean($data[$i++]));
-		$entity->setGroupCounting($this->decodeBoolean($data[$i++]));
-		$entity->setEntryMaxLevelAllowed($this->decodeBoolean($data[$i++]));
-		$entity->setMaxLevelCarPark($this->decodeBoolean($data[$i++]));
+		$entity->setDeletedRecord(BooleanUtility::parseString($data[$i++]));
+		$entity->setTicketReturnAllowed(BooleanUtility::parseString($data[$i++]));
+		$entity->setGroupCounting(BooleanUtility::parseString($data[$i++]));
+		$entity->setEntryMaxLevelAllowed(BooleanUtility::parseString($data[$i++]));
+		$entity->setMaxLevelCarPark(BooleanUtility::parseString($data[$i++]));
 		$entity->setRemarks2($this->decodeString($data[$i++]));
 		$entity->setRemarks3($this->decodeString($data[$i++]));
 		$entity->setDivision($this->decodeString($data[$i++]));
 		$entity->setEmail($this->decodeString($data[$i++]));
-		$entity->setCountingNeutralCards($this->decodeBoolean($data[$i++]));
+		$entity->setCountingNeutralCards(BooleanUtility::parseString($data[$i++]));
 		$entity->setNationality($this->decodeString($data[$i++]));
 		$entity->setAccountingNumber($this->decodeString($data[$i++]));
 

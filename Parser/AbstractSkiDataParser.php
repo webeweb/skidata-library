@@ -40,16 +40,6 @@ abstract class AbstractSkiDataParser implements SkiDataParserInterface {
 	}
 
 	/**
-	 * Decode a boolean string.
-	 *
-	 * @param string $str The string.
-	 * @return boolean Returns the decoded string into boolean.
-	 */
-	protected final function decodeBoolean($str) {
-		return $str === "1" ? true : false;
-	}
-
-	/**
 	 * Decode a date string.
 	 *
 	 * @param string $str The string.

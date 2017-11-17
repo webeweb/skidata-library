@@ -11,6 +11,7 @@
 
 namespace WBW\Library\SkiData\Parser;
 
+use WBW\Library\Core\Utility\BooleanUtility;
 use WBW\Library\SkiData\Entity\SkiDataUserEntity;
 
 /**
@@ -95,18 +96,18 @@ final class SkiDataUserParser extends AbstractSkiDataParser {
 		$entity->setParkingSpace($this->decodeString($data[$i++]));
 		$entity->setRemarks($this->decodeString($data[$i++]));
 		$entity->setDatetimeLastModification($this->decodeDateTime($data[$i++]));
-		$entity->setDeletedRecord($this->decodeBoolean($data[$i++]));
+		$entity->setDeletedRecord(BooleanUtility::parseString($data[$i++]));
 		$entity->setIdentificationNumber($this->decodeString($data[$i++]));
-		$entity->setCheckLicensePlate($this->decodeBoolean($data[$i++]));
-		$entity->setPassageLicensePlatePermitted($this->decodeBoolean($data[$i++]));
-		$entity->setExcessTimesCreditCard($this->decodeBoolean($data[$i++]));
+		$entity->setCheckLicensePlate(BooleanUtility::parseString($data[$i++]));
+		$entity->setPassageLicensePlatePermitted(BooleanUtility::parseString($data[$i++]));
+		$entity->setExcessTimesCreditCard(BooleanUtility::parseString($data[$i++]));
 		$entity->setCreditCardNumber($this->decodeString($data[$i++]));
 		$entity->setExpiryDate($this->decodeDate($data[$i++]));
 		$entity->setRemarks2($this->decodeString($data[$i++]));
 		$entity->setRemarks3($this->decodeString($data[$i++]));
 		$entity->setDivision($this->decodeString($data[$i++]));
 		$entity->setEmail($this->decodeString($data[$i++]));
-		$entity->setGroupCounting($this->decodeBoolean($data[$i++]));
+		$entity->setGroupCounting(BooleanUtility::parseString($data[$i++]));
 		$entity->setETicketTypeP($this->decodeInteger($data[$i++]));
 		$entity->setETicketEmailTelephone($this->decodeString($data[$i++]));
 		$entity->setETicketAuthentication($this->decodeInteger($data[$i++]));
