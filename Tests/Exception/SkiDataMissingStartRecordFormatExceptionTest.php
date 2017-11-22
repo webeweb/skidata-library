@@ -1,6 +1,6 @@
 <?php
 
-/*
+/**
  * This file is part of the skidata-library package.
  *
  * (c) 2017 NdC/WBW
