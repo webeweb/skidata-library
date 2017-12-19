@@ -21,11 +21,15 @@ interface SkiDataParserInterface {
 
 	/**
 	 * Date format.
+	 *
+	 * @var string
 	 */
 	const DATE_FORMAT = "Ymd";
 
 	/**
 	 * Date/time format.
+	 *
+	 * @var string
 	 */
 	const DATETIME_FORMAT = "Ymd His";
 
