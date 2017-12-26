@@ -45,7 +45,7 @@ abstract class AbstractSkiDataParser implements SkiDataParserInterface {
 	 * @param string $str The string.
 	 * @return DateTime Returns the decoded string into DateTime.
 	 */
-	protected final function decodeDate($str) {
+	final protected function decodeDate($str) {
 		return $str === "" ? null : DateTime::createFromFormat("!" . self::DATE_FORMAT, $str);
 	}
 
@@ -55,7 +55,7 @@ abstract class AbstractSkiDataParser implements SkiDataParserInterface {
 	 * @param string $str The string.
 	 * @return DateTime Returns the decoded string into DateTime.
 	 */
-	protected final function decodeDateTime($str) {
+	final protected function decodeDateTime($str) {
 		return $str === "" ? null : DateTime::createFromFormat(self::DATETIME_FORMAT, $str);
 	}
 
@@ -65,7 +65,7 @@ abstract class AbstractSkiDataParser implements SkiDataParserInterface {
 	 * @param string $str The string.
 	 * @return integer Returns the decoded string into integer.
 	 */
-	protected final function decodeInteger($str) {
+	final protected function decodeInteger($str) {
 		return $str === "" ? null : intval($str);
 	}
 
@@ -75,7 +75,7 @@ abstract class AbstractSkiDataParser implements SkiDataParserInterface {
 	 * @param string $str The string.
 	 * @return string Returns the decoded string into string.
 	 */
-	protected final function decodeString($str) {
+	final protected function decodeString($str) {
 		return ($str === "" || strlen($str) === 2) ? "" : substr($str, 1, strlen($str) - 2);
 	}
 
@@ -85,7 +85,7 @@ abstract class AbstractSkiDataParser implements SkiDataParserInterface {
 	 * @param boolean $value The value.
 	 * @return string Returns the encoded boolean value.
 	 */
-	protected final function encodeBoolean($value) {
+	final protected function encodeBoolean($value) {
 		return $value === true ? "1" : "0";
 	}
 
@@ -95,7 +95,7 @@ abstract class AbstractSkiDataParser implements SkiDataParserInterface {
 	 * @param DateTime $value The value.
 	 * @return string Returns the encoded datetime value.
 	 */
-	protected final function encodeDate(DateTime $value = null) {
+	final protected function encodeDate(DateTime $value = null) {
 		return !is_null($value) ? $value->format(self::DATE_FORMAT) : "";
 	}
 
@@ -105,7 +105,7 @@ abstract class AbstractSkiDataParser implements SkiDataParserInterface {
 	 * @param DateTime $value The value.
 	 * @return string Returns the encoded datetime value.
 	 */
-	protected final function encodeDateTime(DateTime $value = null) {
+	final protected function encodeDateTime(DateTime $value = null) {
 		return !is_null($value) ? $value->format(self::DATETIME_FORMAT) : "";
 	}
 
@@ -117,7 +117,7 @@ abstract class AbstractSkiDataParser implements SkiDataParserInterface {
 	 * @return string Returns the encoded integer.
 	 * @throws SkiDataTooLongDataException Throws a SkiData too long data exception if the value exceeds the length.
 	 */
-	protected final function encodeInteger($value, $length) {
+	final protected function encodeInteger($value, $length) {
 		$format	 = "%'.0" . $length . "d";
 		$output	 = sprintf($format, $value);
 		if ($length < strlen($output)) {
@@ -134,7 +134,7 @@ abstract class AbstractSkiDataParser implements SkiDataParserInterface {
 	 * @return string Returns the encoded string.
 	 * @throws SkiDataTooLongDataException Throws a SkiData too long data exception if the value exceeds the length.
 	 */
-	protected final function encodeString($value, $length = -1) {
+	final protected function encodeString($value, $length = -1) {
 		if ($length !== -1 && $length < strlen($value)) {
 			throw new SkiDataTooLongDataException($value, $length);
 		}
@@ -146,7 +146,7 @@ abstract class AbstractSkiDataParser implements SkiDataParserInterface {
 	 *
 	 * @return SkiDataStartRecordFormatEntity Returns the start record format.
 	 */
-	public final function getStartRecordFormat() {
+	final public function getStartRecordFormat() {
 		return $this->startRecordFormat;
 	}
 
@@ -157,7 +157,7 @@ abstract class AbstractSkiDataParser implements SkiDataParserInterface {
 	 * @return boolean Returns true in case of success, false otherwise.
 	 * @throws SkiDataMissingStartRecordFormatException Throws a SkiData missing start record format exception if the start record format is missing.
 	 */
-	protected final function isVersionRecordStructure($versionRecordStructure) {
+	final protected function isVersionRecordStructure($versionRecordStructure) {
 		if (is_null($this->startRecordFormat)) {
 			throw new SkiDataMissingStartRecordFormatException();
 		}
@@ -170,7 +170,7 @@ abstract class AbstractSkiDataParser implements SkiDataParserInterface {
 	 * @param SkiDataStartRecordFormatEntity $startRecordFormat The start record format.
 	 * @return AbstractSkiDataParser Returns the SkiData parser.
 	 */
-	public final function setStartRecordFormat(SkiDataStartRecordFormatEntity $startRecordFormat) {
+	final public function setStartRecordFormat(SkiDataStartRecordFormatEntity $startRecordFormat) {
 		$this->startRecordFormat = $startRecordFormat;
 		return $this;
 	}
