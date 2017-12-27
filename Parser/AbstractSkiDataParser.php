@@ -46,7 +46,7 @@ abstract class AbstractSkiDataParser implements SkiDataParserInterface {
 	 * @return DateTime Returns the decoded string into DateTime.
 	 */
 	final protected function decodeDate($str) {
-		return $str === "" ? null : DateTime::createFromFormat("!" . self::DATE_FORMAT, $str);
+		return "" === $str ? null : DateTime::createFromFormat("!" . self::DATE_FORMAT, $str);
 	}
 
 	/**
@@ -56,7 +56,7 @@ abstract class AbstractSkiDataParser implements SkiDataParserInterface {
 	 * @return DateTime Returns the decoded string into DateTime.
 	 */
 	final protected function decodeDateTime($str) {
-		return $str === "" ? null : DateTime::createFromFormat(self::DATETIME_FORMAT, $str);
+		return "" === $str ? null : DateTime::createFromFormat(self::DATETIME_FORMAT, $str);
 	}
 
 	/**
@@ -66,7 +66,7 @@ abstract class AbstractSkiDataParser implements SkiDataParserInterface {
 	 * @return integer Returns the decoded string into integer.
 	 */
 	final protected function decodeInteger($str) {
-		return $str === "" ? null : intval($str);
+		return "" === $str ? null : intval($str);
 	}
 
 	/**
@@ -76,7 +76,7 @@ abstract class AbstractSkiDataParser implements SkiDataParserInterface {
 	 * @return string Returns the decoded string into string.
 	 */
 	final protected function decodeString($str) {
-		return ($str === "" || strlen($str) === 2) ? "" : substr($str, 1, strlen($str) - 2);
+		return ("" === $str || 2 === strlen($str)) ? "" : substr($str, 1, strlen($str) - 2);
 	}
 
 	/**
@@ -86,7 +86,7 @@ abstract class AbstractSkiDataParser implements SkiDataParserInterface {
 	 * @return string Returns the encoded boolean value.
 	 */
 	final protected function encodeBoolean($value) {
-		return $value === true ? "1" : "0";
+		return true === $value ? "1" : "0";
 	}
 
 	/**
@@ -96,7 +96,7 @@ abstract class AbstractSkiDataParser implements SkiDataParserInterface {
 	 * @return string Returns the encoded datetime value.
 	 */
 	final protected function encodeDate(DateTime $value = null) {
-		return !is_null($value) ? $value->format(self::DATE_FORMAT) : "";
+		return null !== $value ? $value->format(self::DATE_FORMAT) : "";
 	}
 
 	/**
@@ -106,7 +106,7 @@ abstract class AbstractSkiDataParser implements SkiDataParserInterface {
 	 * @return string Returns the encoded datetime value.
 	 */
 	final protected function encodeDateTime(DateTime $value = null) {
-		return !is_null($value) ? $value->format(self::DATETIME_FORMAT) : "";
+		return null !== $value ? $value->format(self::DATETIME_FORMAT) : "";
 	}
 
 	/**
@@ -138,7 +138,7 @@ abstract class AbstractSkiDataParser implements SkiDataParserInterface {
 		if (-1 !== $length && $length < strlen($value)) {
 			throw new SkiDataTooLongDataException($value, $length);
 		}
-		return "\"" . substr($value, 0, ($length === -1 ? strlen($value) : $length)) . "\"";
+		return "\"" . substr($value, 0, (-1 === $length ? strlen($value) : $length)) . "\"";
 	}
 
 	/**
