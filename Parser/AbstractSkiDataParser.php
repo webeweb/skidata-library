@@ -135,7 +135,7 @@ abstract class AbstractSkiDataParser implements SkiDataParserInterface {
 	 * @throws SkiDataTooLongDataException Throws a SkiData too long data exception if the value exceeds the length.
 	 */
 	final protected function encodeString($value, $length = -1) {
-		if ($length !== -1 && $length < strlen($value)) {
+		if (-1 !== $length && $length < strlen($value)) {
 			throw new SkiDataTooLongDataException($value, $length);
 		}
 		return "\"" . substr($value, 0, ($length === -1 ? strlen($value) : $length)) . "\"";
@@ -158,7 +158,7 @@ abstract class AbstractSkiDataParser implements SkiDataParserInterface {
 	 * @throws SkiDataMissingStartRecordFormatException Throws a SkiData missing start record format exception if the start record format is missing.
 	 */
 	final protected function isVersionRecordStructure($versionRecordStructure) {
-		if (is_null($this->startRecordFormat)) {
+		if (null === $this->startRecordFormat) {
 			throw new SkiDataMissingStartRecordFormatException();
 		}
 		return $versionRecordStructure <= $this->startRecordFormat->getVersionRecordStructure();
