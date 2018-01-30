@@ -20,14 +20,14 @@ namespace WBW\Library\SkiData\Exception;
  */
 final class SkiDataTooLongDataException extends AbstractSkiDataException {
 
-	/**
-	 * Constructor.
-	 *
-	 * @param string $value The value.
-	 * @param integer $length The length.
-	 */
-	public function __construct($value, $length) {
-		parent::__construct("The data \"" . $value . "\" exceeds the length \"" . $length . "\" allowed");
-	}
+    /**
+     * Constructor.
+     *
+     * @param string $value The value.
+     * @param integer $length The length.
+     */
+    public function __construct($value, $length) {
+        parent::__construct("The data \"" . $value . "\" exceeds the length \"" . $length . "\" allowed");
+    }
 
 }

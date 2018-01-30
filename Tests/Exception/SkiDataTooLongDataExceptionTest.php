@@ -23,15 +23,15 @@ use WBW\Library\SkiData\Exception\SkiDataTooLongDataException;
  */
 final class SkiDataTooLongDataExceptionTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstruct() {
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
 
-		$ex = new SkiDataTooLongDataException("", 0);
-		$this->assertEquals("The data \"\" exceeds the length \"0\" allowed", $ex->getMessage());
-	}
+        $ex = new SkiDataTooLongDataException("", 0);
+        $this->assertEquals("The data \"\" exceeds the length \"0\" allowed", $ex->getMessage());
+    }
 
 }

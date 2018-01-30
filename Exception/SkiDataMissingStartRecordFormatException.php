@@ -20,11 +20,11 @@ namespace WBW\Library\SkiData\Exception;
  */
 final class SkiDataMissingStartRecordFormatException extends AbstractSkiDataException {
 
-	/**
-	 * Constructor.
-	 */
-	public function __construct() {
-		parent::__construct("The start record format is missing");
-	}
+    /**
+     * Constructor.
+     */
+    public function __construct() {
+        parent::__construct("The start record format is missing");
+    }
 
 }
