@@ -27,7 +27,7 @@ final class SkiDataTooLongDataException extends AbstractSkiDataException {
      * @param integer $length The length.
      */
     public function __construct($value, $length) {
-        parent::__construct("The data \"" . $value . "\" exceeds the length \"" . $length . "\" allowed");
+        parent::__construct(sprintf("The data \"%s\" exceeds the length \"%d\" allowed", $value, $length));
     }
 
 }
