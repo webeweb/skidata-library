@@ -12,7 +12,7 @@
 namespace WBW\Library\SkiData\Parser;
 
 use WBW\Library\Core\Utility\BooleanUtility;
-use WBW\Library\SkiData\Entity\SkiDataUserEntity;
+use WBW\Library\SkiData\Entity\SkiDataUser;
 
 /**
  * SkiDataUserParser
@@ -33,10 +33,10 @@ final class SkiDataUserParser extends AbstractSkiDataParser {
     /**
      * Parse a SkiData user entity.
      *
-     * @param SkiDataUserEntity $entity The SkiData user entity.
+     * @param SkiDataUser $entity The SkiData user entity.
      * @return string Returns the parsed SkiData user entity.
      */
-    public function parseEntity(SkiDataUserEntity $entity) {
+    public function parseEntity(SkiDataUser $entity) {
 
         // Initialise the output.
         $output = [];
@@ -76,7 +76,7 @@ final class SkiDataUserParser extends AbstractSkiDataParser {
      * Parse a line.
      *
      * @param string $line The line.
-     * @return SkiDataUserEntity Returns a SkiData user entity.
+     * @return SkiDataUser Returns a SkiData user entity.
      */
     public function parseLine($line) {
 
@@ -85,7 +85,7 @@ final class SkiDataUserParser extends AbstractSkiDataParser {
         $i    = 0;
 
         // Initialize the entity.
-        $entity = new SkiDataUserEntity();
+        $entity = new SkiDataUser();
 
         $entity->setUserNumber($this->decodeInteger($data[$i++]));
         $entity->setCustomerNumber($this->decodeInteger($data[$i++]));

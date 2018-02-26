@@ -20,7 +20,7 @@ use DateTime;
  * @package WBW\Library\SkiData\Entity
  * @final
  */
-final class SkiDataCardEntity {
+final class SkiDataCard {
 
     /**
      * Article number.

@@ -12,7 +12,7 @@
 namespace WBW\Library\SkiData\Parser;
 
 use WBW\Library\SkiData\Entity\SkiDataCustomerEntity;
-use WBW\Library\SkiData\Entity\SkiDataStartRecordFormatEntity;
+use WBW\Library\SkiData\Entity\SkiDataStartRecordFormat;
 
 /**
  * SkiData start record format parser.
@@ -36,7 +36,7 @@ final class SkiDataStartRecordFormatParser extends AbstractSkiDataParser {
      * @param SkiDataCustomerEntity $entity The SkiData start record format entity.
      * @return string Returns the parsed SkiData start record format entity.
      */
-    public function parseEntity(SkiDataStartRecordFormatEntity $entity) {
+    public function parseEntity(SkiDataStartRecordFormat $entity) {
 
         // Initialise the output.
         $output = [];
@@ -55,7 +55,7 @@ final class SkiDataStartRecordFormatParser extends AbstractSkiDataParser {
      * Parse a line.
      *
      * @param string $line The line.
-     * @return SkiDataStartRecordFormatEntity Returns a SkiData start record format entity.
+     * @return SkiDataStartRecordFormat Returns a SkiData start record format entity.
      */
     public function parseLine($line) {
 
@@ -64,7 +64,7 @@ final class SkiDataStartRecordFormatParser extends AbstractSkiDataParser {
         $i    = 0;
 
         // Initialize the entity.
-        $entity = new SkiDataStartRecordFormatEntity();
+        $entity = new SkiDataStartRecordFormat();
 
         $entity->setVersionRecordStructure($this->decodeInteger($data[$i++]));
         $entity->setFacilityNumber($this->decodeInteger($data[$i++]));

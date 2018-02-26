@@ -20,7 +20,7 @@ use DateTime;
  * @package WBW\Library\SkiData\Entity
  * @final
  */
-final class SkiDataUserEntity {
+final class SkiDataUser {
 
     /**
      * Check licence plate.

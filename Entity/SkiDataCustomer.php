@@ -20,7 +20,7 @@ use DateTime;
  * @package WBW\Library\SkiData\Entity
  * @final
  */
-final class SkiDataCustomerEntity {
+final class SkiDataCustomer {
 
     /**
      * Accounting number

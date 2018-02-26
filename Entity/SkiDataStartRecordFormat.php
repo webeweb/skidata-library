@@ -20,7 +20,7 @@ use DateTime;
  * @package WBW\Library\SkiData\Entity
  * @final
  */
-final class SkiDataStartRecordFormatEntity {
+final class SkiDataStartRecordFormat {
 
     /**
      * Currency.
