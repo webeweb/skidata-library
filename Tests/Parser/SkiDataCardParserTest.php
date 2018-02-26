@@ -13,7 +13,7 @@ namespace WBW\Library\SkiData\Tests\Parser;
 
 use DateTime;
 use PHPUnit_Framework_TestCase;
-use WBW\Library\SkiData\Entity\SkiDataCardEntity;
+use WBW\Library\SkiData\Entity\SkiDataCard;
 use WBW\Library\SkiData\Parser\SkiDataCardParser;
 
 /**
@@ -32,7 +32,7 @@ final class SkiDataCardParserTest extends PHPUnit_Framework_TestCase {
      */
     public function testParseEntity() {
 
-        $obj = new SkiDataCardEntity();
+        $obj = new SkiDataCard();
         $obj->setTicketNumber("ticketNumber");
         $obj->setUserNumber(987654321);
         $obj->setArticleNumber(321);

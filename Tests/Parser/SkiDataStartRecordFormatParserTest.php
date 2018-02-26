@@ -18,7 +18,7 @@ namespace WBW\Library\SkiData\Tests\Parser;
 use DateTime;
 use Exception;
 use PHPUnit_Framework_TestCase;
-use WBW\Library\SkiData\Entity\SkiDataStartRecordFormatEntity;
+use WBW\Library\SkiData\Entity\SkiDataStartRecordFormat;
 use WBW\Library\SkiData\Exception\SkiDataTooLongDataException;
 use WBW\Library\SkiData\Parser\SkiDataStartRecordFormatParser;
 
@@ -42,7 +42,7 @@ final class SkiDataStartRecordFormatParserTest extends PHPUnit_Framework_TestCas
 
         $this->assertEquals(null, $obj->getStartRecordFormat());
 
-        $res = new SkiDataStartRecordFormatEntity();
+        $res = new SkiDataStartRecordFormat();
         $obj->setStartRecordFormat($res);
         $this->assertEquals($res, $obj->getStartRecordFormat());
     }
@@ -54,7 +54,7 @@ final class SkiDataStartRecordFormatParserTest extends PHPUnit_Framework_TestCas
      */
     public function testParseEntity() {
 
-        $obj = new SkiDataStartRecordFormatEntity();
+        $obj = new SkiDataStartRecordFormat();
         $obj->setVersionRecordStructure(190000);
         $obj->setFacilityNumber(202747);
         $obj->setDateFile(new DateTime("2017-09-21 16:10:00"));
