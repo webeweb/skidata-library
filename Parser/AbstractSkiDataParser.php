@@ -119,6 +119,9 @@ abstract class AbstractSkiDataParser implements SkiDataParserInterface {
      * @throws SkiDataTooLongDataException Throws a SkiData too long data exception if the value exceeds the length.
      */
     final protected function encodeInteger($value, $length) {
+        if (null === $value) {
+            return "";
+        }
         $format = "%'.0" . $length . "d";
         $output = sprintf($format, $value);
         if ($length < strlen($output)) {
