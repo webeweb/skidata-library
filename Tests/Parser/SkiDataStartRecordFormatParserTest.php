@@ -25,7 +25,7 @@ use WBW\Library\SkiData\Parser\SkiDataStartRecordFormatParser;
 /**
  * SkiData start record format parser test.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\SkiData\Tests\Parser
  * @final
  */
