@@ -184,7 +184,7 @@ final class SkiDataCard {
     private $suspendPeriodUntil;
 
     /**
-     * SKIDATA ticket number.
+     * SkiData ticket number.
      *
      * @var string
      */
@@ -334,7 +334,7 @@ final class SkiDataCard {
     /**
      * Get the personnal no.
      *
-     * @return string Returns the personnal no.
+     * @return integer Returns the personnal no.
      */
     public function getPersonnalNo() {
         return $this->personnalNo;
@@ -440,9 +440,9 @@ final class SkiDataCard {
     }
 
     /**
-     * Get the SKIDATA ticket number.
+     * Get the SkiData ticket number.
      *
-     * @return string Returns the SKIDATA ticket number.
+     * @return string Returns the SkiData ticket number.
      */
     public function getTicketNumber() {
         return $this->ticketNumber;
@@ -747,9 +747,9 @@ final class SkiDataCard {
     }
 
     /**
-     * Set the SKIDATA ticket number.
+     * Set the SkiData ticket number.
      *
-     * @param type $ticketNumber The SKIDATA ticket number.
+     * @param string $ticketNumber The SkiData ticket number.
      * @return SkiDataCard Returns the SkiData card entity.
      */
     public function setTicketNumber($ticketNumber) {
