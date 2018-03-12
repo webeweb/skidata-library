@@ -11,7 +11,6 @@
 
 namespace WBW\Library\SkiData\Parser;
 
-use WBW\Library\SkiData\Entity\SkiDataCustomerEntity;
 use WBW\Library\SkiData\Entity\SkiDataStartRecordFormat;
 
 /**
@@ -33,7 +32,7 @@ final class SkiDataStartRecordFormatParser extends AbstractSkiDataParser {
     /**
      * Parse a SkiData start record format entity.
      *
-     * @param SkiDataCustomerEntity $entity The SkiData start record format entity.
+     * @param SkiDataStartRecordFormat $entity The SkiData start record format entity.
      * @return string Returns the parsed SkiData start record format entity.
      */
     public function parseEntity(SkiDataStartRecordFormat $entity) {
