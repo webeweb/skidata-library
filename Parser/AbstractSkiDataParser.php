@@ -13,7 +13,6 @@ namespace WBW\Library\SkiData\Parser;
 
 use DateTime;
 use WBW\Library\SkiData\Entity\SkiDataStartRecordFormat;
-use WBW\Library\SkiData\Entity\SkiDataStartRecordFormatEntity;
 use WBW\Library\SkiData\Exception\SkiDataMissingStartRecordFormatException;
 use WBW\Library\SkiData\Exception\SkiDataTooLongDataException;
 
@@ -29,7 +28,7 @@ abstract class AbstractSkiDataParser implements SkiDataParserInterface {
     /**
      * Start record format.
      *
-     * @var SkiDataStartRecordFormatEntity
+     * @var SkiDataStartRecordFormat
      */
     private $startRecordFormat;
 
@@ -148,7 +147,7 @@ abstract class AbstractSkiDataParser implements SkiDataParserInterface {
     /**
      * Get the start record format.
      *
-     * @return SkiDataStartRecordFormatEntity Returns the start record format.
+     * @return SkiDataStartRecordFormat Returns the start record format.
      */
     final public function getStartRecordFormat() {
         return $this->startRecordFormat;

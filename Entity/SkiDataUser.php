@@ -53,7 +53,7 @@ final class SkiDataUser {
     /**
      * Date/time of last modification.
      *
-     * @var DateTime.
+     * @var DateTime
      */
     private $datetimeLastModification;
 
@@ -449,7 +449,7 @@ final class SkiDataUser {
      * Set the check with license plate.
      *
      * @param boolean $checkLicensePlate The check with license plate.
-     * @return SkiDataUserEntity Returns the SkiData user entity.
+     * @return SkiDataUser Returns the SkiData user entity.
      */
     public function setCheckLicensePlate($checkLicensePlate) {
         $this->checkLicensePlate = $checkLicensePlate;
@@ -460,7 +460,7 @@ final class SkiDataUser {
      * Set the credit card number.
      *
      * @param string $creditCardNumber The credit card number.
-     * @return SkiDataUserEntity Returns the SkiData user entity.
+     * @return SkiDataUser Returns the SkiData user entity.
      */
     public function setCreditCardNumber($creditCardNumber) {
         $this->creditCardNumber = $creditCardNumber;
@@ -471,7 +471,7 @@ final class SkiDataUser {
      * Set the customer number.
      *
      * @param integer $customerNumber The customer number.
-     * @return SkiDataUserEntity Returns the SkiData user entity.
+     * @return SkiDataUser Returns the SkiData user entity.
      */
     public function setCustomerNumber($customerNumber) {
         $this->customerNumber = $customerNumber;
@@ -482,7 +482,7 @@ final class SkiDataUser {
      * Set the date of birth.
      *
      * @param DateTime $dateBirth The date of birth.
-     * @return SkiDataUserEntity Returns the SkiData user entity.
+     * @return SkiDataUser Returns the SkiData user entity.
      */
     public function setDateBirth(DateTime $dateBirth = null) {
         $this->dateBirth = $dateBirth;
@@ -493,7 +493,7 @@ final class SkiDataUser {
      * Set the date/time of last modification.
      *
      * @param DateTime $datetimeLastModification The date/time of last modification.
-     * @return SkiDataUserEntity Returns the SkiData user entity.
+     * @return SkiDataUser Returns the SkiData user entity.
      */
     public function setDatetimeLastModification(DateTime $datetimeLastModification = null) {
         $this->datetimeLastModification = $datetimeLastModification;
@@ -504,7 +504,7 @@ final class SkiDataUser {
      * Set the deleted record.
      *
      * @param boolean $deletedRecord The deleted record.
-     * @return SkiDataUserEntity Returns the SkiData user entity.
+     * @return SkiDataUser Returns the SkiData user entity.
      */
     public function setDeletedRecord($deletedRecord) {
         $this->deletedRecord = $deletedRecord;
@@ -515,7 +515,7 @@ final class SkiDataUser {
      * Set the division.
      *
      * @param string $division The division.
-     * @return SkiDataUserEntity Returns the SkiData user entity.
+     * @return SkiDataUser Returns the SkiData user entity.
      */
     public function setDivision($division) {
         $this->division = $division;
@@ -526,7 +526,7 @@ final class SkiDataUser {
      * Set the E-ticket authentication.
      *
      * @param integer $eTicketAuthentication The E-ticket authentication.
-     * @return SkiDataUserEntity Returns the SkiData user entity.
+     * @return SkiDataUser Returns the SkiData user entity.
      */
     public function setETicketAuthentication($eTicketAuthentication) {
         $this->eTicketAuthentication = $eTicketAuthentication;
@@ -537,7 +537,7 @@ final class SkiDataUser {
      * Set the E-ticket email/telephone.
      *
      * @param string $eTicketEmailTelephone The E-ticket email/telephone.
-     * @return SkiDataUserEntity Returns the SkiData user entity.
+     * @return SkiDataUser Returns the SkiData user entity.
      */
     public function setETicketEmailTelephone($eTicketEmailTelephone) {
         $this->eTicketEmailTelephone = $eTicketEmailTelephone;
@@ -548,7 +548,7 @@ final class SkiDataUser {
      * Set the E-ticket service art.
      *
      * @param integer $eTicketServiceArt The E-ticket service art.
-     * @return SkiDataUserEntity Returns the SkiData user entity.
+     * @return SkiDataUser Returns the SkiData user entity.
      */
     public function setETicketServiceArt($eTicketServiceArt) {
         $this->eTicketServiceArt = $eTicketServiceArt;
@@ -559,7 +559,7 @@ final class SkiDataUser {
      * Set the E-ticket service typ.
      *
      * @param integer $eTicketServiceTyp The E-ticket service typ.
-     * @return SkiDataUserEntity Returns the SkiData user entity.
+     * @return SkiDataUser Returns the SkiData user entity.
      */
     public function setETicketServiceTyp($eTicketServiceTyp) {
         $this->eTicketServiceTyp = $eTicketServiceTyp;
@@ -570,7 +570,7 @@ final class SkiDataUser {
      * Set the E-ticket type p.
      *
      * @param integer $eTicketTypeP The E-ticket type p.
-     * @return SkiDataUserEntity Returns the SkiData user entity.
+     * @return SkiDataUser Returns the SkiData user entity.
      */
     public function setETicketTypeP($eTicketTypeP) {
         $this->eTicketTypeP = $eTicketTypeP;
@@ -581,7 +581,7 @@ final class SkiDataUser {
      * Set the email.
      *
      * @param string $email The email.
-     * @return SkiDataUserEntity Returns the SkiData user entity.
+     * @return SkiDataUser Returns the SkiData user entity.
      */
     public function setEmail($email) {
         $this->email = $email;
@@ -592,7 +592,7 @@ final class SkiDataUser {
      * Set the excess times with credit card.
      *
      * @param boolean $excessTimesCreditCard The excess times with credit card.
-     * @return SkiDataUserEntity Returns the SkiData user entity.
+     * @return SkiDataUser Returns the SkiData user entity.
      */
     public function setExcessTimesCreditCard($excessTimesCreditCard) {
         $this->excessTimesCreditCard = $excessTimesCreditCard;
@@ -603,7 +603,7 @@ final class SkiDataUser {
      * Set the expiry date.
      *
      * @param DateTime $expiryDate The expiry date.
-     * @return SkiDataUserEntity Returns the SkiData user entity.
+     * @return SkiDataUser Returns the SkiData user entity.
      */
     public function setExpiryDate(DateTime $expiryDate = null) {
         $this->expiryDate = $expiryDate;
@@ -614,7 +614,7 @@ final class SkiDataUser {
      * Set the firstname.
      *
      * @param string $firstname The firstname.
-     * @return SkiDataUserEntity Returns the SkiData user entity.
+     * @return SkiDataUser Returns the SkiData user entity.
      */
     public function setFirstname($firstname) {
         $this->firstname = $firstname;
@@ -625,7 +625,7 @@ final class SkiDataUser {
      * Set the group counting.
      *
      * @param boolean $groupCounting The group counting.
-     * @return SkiDataUserEntity Returns the SkiData user entity.
+     * @return SkiDataUser Returns the SkiData user entity.
      */
     public function setGroupCounting($groupCounting) {
         $this->groupCounting = $groupCounting;
@@ -636,7 +636,7 @@ final class SkiDataUser {
      * Set the identification number.
      *
      * @param string $identificationNumber The identification number.
-     * @return SkiDataUserEntity Returns the SkiData user entity.
+     * @return SkiDataUser Returns the SkiData user entity.
      */
     public function setIdentificationNumber($identificationNumber) {
         $this->identificationNumber = $identificationNumber;
@@ -647,7 +647,7 @@ final class SkiDataUser {
      * Set the parking space.
      *
      * @param string $parkingSpace The parking space.
-     * @return SkiDataUserEntity Returns the SkiData user entity.
+     * @return SkiDataUser Returns the SkiData user entity.
      */
     public function setParkingSpace($parkingSpace) {
         $this->parkingSpace = $parkingSpace;
@@ -657,7 +657,7 @@ final class SkiDataUser {
     /**
      * Set the passage with license plate permitted.
      *
-     * @return SkiDataUserEntity Returns the SkiData user entity.
+     * @return SkiDataUser Returns the SkiData user entity.
      * @param boolean $passageLicensePlatePermitted The passage with license plate permitted.
      */
     public function setPassageLicensePlatePermitted($passageLicensePlatePermitted) {
@@ -669,7 +669,7 @@ final class SkiDataUser {
      * Set the remarks.
      *
      * @param string $remarks The remarks.
-     * @return SkiDataUserEntity Returns the SkiData user entity.
+     * @return SkiDataUser Returns the SkiData user entity.
      */
     public function setRemarks($remarks) {
         $this->remarks = $remarks;
@@ -680,7 +680,7 @@ final class SkiDataUser {
      * Set the remarks 2.
      *
      * @param string $remarks2 The remarks 2.
-     * @return SkiDataUserEntity Returns the SkiData user entity.
+     * @return SkiDataUser Returns the SkiData user entity.
      */
     public function setRemarks2($remarks2) {
         $this->remarks2 = $remarks2;
@@ -691,7 +691,7 @@ final class SkiDataUser {
      * Set the remarks 3.
      *
      * @param string $remarks3 The remarks 3.
-     * @return SkiDataUserEntity Returns the SkiData user entity.
+     * @return SkiDataUser Returns the SkiData user entity.
      */
     public function setRemarks3($remarks3) {
         $this->remarks3 = $remarks3;
@@ -702,7 +702,7 @@ final class SkiDataUser {
      * Set the surname.
      *
      * @param string $surname The surname.
-     * @return SkiDataUserEntity Returns the SkiData user entity.
+     * @return SkiDataUser Returns the SkiData user entity.
      */
     public function setSurname($surname) {
         $this->surname = $surname;
@@ -713,7 +713,7 @@ final class SkiDataUser {
      * Set the title.
      *
      * @param string $title The title.
-     * @return SkiDataUserEntity Returns the SkiData user entity.
+     * @return SkiDataUser Returns the SkiData user entity.
      */
     public function setTitle($title) {
         $this->title = $title;
@@ -724,7 +724,7 @@ final class SkiDataUser {
      * Set the user number.
      *
      * @param integer $userNumber The user number.
-     * @return SkiDataUserEntity Returns the SkiData user entity.
+     * @return SkiDataUser Returns the SkiData user entity.
      */
     public function setUserNumber($userNumber) {
         $this->userNumber = $userNumber;

@@ -113,7 +113,7 @@ final class SkiDataStartRecordFormat {
      * Set the currency.
      *
      * @param string $currency The currency.
-     * @return SkiDataStartRecordFormatEntity Returns the SkiData start record format entity.
+     * @return SkiDataStartRecordFormat Returns the SkiData start record format entity.
      */
     public function setCurrency($currency) {
         $this->currency = $currency;
@@ -124,7 +124,7 @@ final class SkiDataStartRecordFormat {
      * Set the date of file.
      *
      * @param DateTime $dateFile The date of file.
-     * @return SkiDataStartRecordFormatEntity Returns the SkiData start record format entity.
+     * @return SkiDataStartRecordFormat Returns the SkiData start record format entity.
      */
     public function setDateFile(DateTime $dateFile = null) {
         $this->dateFile = $dateFile;
@@ -135,7 +135,7 @@ final class SkiDataStartRecordFormat {
      * Set the facility number.
      *
      * @param integer $facilityNumber The facility number.
-     * @return SkiDataStartRecordFormatEntity Returns the SkiData start record format entity.
+     * @return SkiDataStartRecordFormat Returns the SkiData start record format entity.
      */
     public function setFacilityNumber($facilityNumber) {
         $this->facilityNumber = $facilityNumber;
@@ -146,7 +146,7 @@ final class SkiDataStartRecordFormat {
      * Set the number of records.
      *
      * @param integer $numberRecords The number of records.
-     * @return SkiDataStartRecordFormatEntity Returns the SkiData start record format entity.
+     * @return SkiDataStartRecordFormat Returns the SkiData start record format entity.
      */
     public function setNumberRecords($numberRecords) {
         $this->numberRecords = $numberRecords;
@@ -157,7 +157,7 @@ final class SkiDataStartRecordFormat {
      * Set the version of record structure.
      *
      * @param integer $versionRecordStructure The version of record structure.
-     * @return SkiDataStartRecordFormatEntity Returns the SkiData start record format entity.
+     * @return SkiDataStartRecordFormat Returns the SkiData start record format entity.
      */
     public function setVersionRecordStructure($versionRecordStructure) {
         $this->versionRecordStructure = $versionRecordStructure;
