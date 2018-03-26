@@ -98,18 +98,18 @@ final class SkiDataCustomerParserTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(1234, $res->getMaximumLevel());
         $this->assertEquals("remarks", $res->getRemarks());
         $this->assertEquals(new DateTime("2017-09-21 10:35:00"), $res->getDatetimeLastModification());
-        $this->assertEquals(false, $res->getBlocked());
-        $this->assertEquals(null, $res->getBlockedDate());
-        $this->assertEquals(false, $res->getDeletedRecord());
-        $this->assertEquals(true, $res->getTicketReturnAllowed());
-        $this->assertEquals(true, $res->getGroupCounting());
-        $this->assertEquals(false, $res->getEntryMaxLevelAllowed());
-        $this->assertEquals(true, $res->getMaxLevelCarPark());
+        $this->assertFalse($res->getBlocked());
+        $this->assertNull($res->getBlockedDate());
+        $this->assertFalse($res->getDeletedRecord());
+        $this->assertTrue($res->getTicketReturnAllowed());
+        $this->assertTrue($res->getGroupCounting());
+        $this->assertFalse($res->getEntryMaxLevelAllowed());
+        $this->assertTrue($res->getMaxLevelCarPark());
         $this->assertEquals("remarks2", $res->getRemarks2());
         $this->assertEquals("remarks3", $res->getRemarks3());
         $this->assertEquals("division", $res->getDivision());
         $this->assertEquals("email", $res->getEmail());
-        $this->assertEquals(false, $res->getCountingNeutralCards());
+        $this->assertFalse($res->getCountingNeutralCards());
         $this->assertEquals("abc", $res->getNationality());
         $this->assertEquals("accountingNumber", $res->getAccountingNumber());
     }

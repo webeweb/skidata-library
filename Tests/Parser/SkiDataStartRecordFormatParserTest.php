@@ -40,7 +40,7 @@ final class SkiDataStartRecordFormatParserTest extends PHPUnit_Framework_TestCas
 
         $obj = new SkiDataStartRecordFormatParser();
 
-        $this->assertEquals(null, $obj->getStartRecordFormat());
+        $this->assertNull($obj->getStartRecordFormat());
 
         $res = new SkiDataStartRecordFormat();
         $obj->setStartRecordFormat($res);

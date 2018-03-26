@@ -82,17 +82,17 @@ final class SkiDataCardParserTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(321, $res->getArticleNumber());
         $this->assertEquals(new DateTime("2017-09-20 00:00:00"), $res->getValidFrom());
         $this->assertEquals(new DateTime("2017-09-21 00:00:00"), $res->getExpires());
-        $this->assertEquals(true, $res->getBlocked());
-        $this->assertEquals(null, $res->getBlockedDate());
+        $this->assertTrue($res->getBlocked());
+        $this->assertNull($res->getBlockedDate());
         $this->assertEquals(2, $res->getProductionState());
         $this->assertEquals(0, $res->getReasonProduction());
         $this->assertEquals(3412, $res->getProductionCounter());
-        $this->assertEquals(false, $res->getNeutral());
-        $this->assertEquals(false, $res->getRetainTicketEntry());
-        $this->assertEquals(true, $res->getEntryBarrierClosed());
-        $this->assertEquals(true, $res->getExitBarrierClosed());
-        $this->assertEquals(false, $res->getRetainTicketExit());
-        $this->assertEquals(true, $res->getDisplayText());
+        $this->assertFalse($res->getNeutral());
+        $this->assertFalse($res->getRetainTicketEntry());
+        $this->assertTrue($res->getEntryBarrierClosed());
+        $this->assertTrue($res->getExitBarrierClosed());
+        $this->assertFalse($res->getRetainTicketExit());
+        $this->assertTrue($res->getDisplayText());
         $this->assertEquals("displayText1", $res->getDisplayText1());
         $this->assertEquals("displayText2", $res->getDisplayText2());
         $this->assertEquals(9876, $res->getPersonnalNo());
@@ -102,9 +102,9 @@ final class SkiDataCardParserTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(3, $res->getTicketType());
         $this->assertEquals("ticke", $res->getTicketSubType());
         $this->assertEquals("serialNo", $res->getSerialNo());
-        $this->assertEquals(null, $res->getSuspendPeriodFrom());
+        $this->assertNull($res->getSuspendPeriodFrom());
         $this->assertEquals(new DateTime("2017-09-22 00:00:00"), $res->getSuspendPeriodUntil());
-        $this->assertEquals(true, $res->getUseValidCarParks());
+        $this->assertTrue($res->getUseValidCarParks());
         $this->assertEquals(1234567, $res->getProductionFacilityNumber());
     }
 
