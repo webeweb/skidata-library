@@ -12,7 +12,7 @@
 namespace WBW\Library\SkiData\Exception;
 
 use SebastianBergmann\RecursionContext\Exception;
-use WBW\Library\Core\Exception\AbstractWBWException;
+use WBW\Library\Core\Exception\AbstractCoreException;
 
 /**
  * Abstract SkiData exception.
@@ -21,7 +21,7 @@ use WBW\Library\Core\Exception\AbstractWBWException;
  * @package WBW\Library\SkiData\Exception
  * @abstract
  */
-abstract class AbstractSkiDataException extends AbstractWBWException {
+abstract class AbstractSkiDataException extends AbstractCoreException {
 
     /**
      * Constructor.
