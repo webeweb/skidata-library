@@ -16,9 +16,8 @@ namespace WBW\Library\SkiData\Exception;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\SkiData\Exception
- * @final
  */
-final class SkiDataTooLongDataException extends AbstractSkiDataException {
+class SkiDataTooLongDataException extends AbstractSkiDataException {
 
     /**
      * Constructor.
