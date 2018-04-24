@@ -18,9 +18,8 @@ use DateTime;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\SkiData\Entity
- * @final
  */
-final class SkiDataUser {
+class SkiDataUser {
 
     /**
      * Check licence plate.
