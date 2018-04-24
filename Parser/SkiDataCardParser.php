@@ -19,9 +19,8 @@ use WBW\Library\SkiData\Entity\SkiDataCard;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\SkiData\Parser
- * @final
  */
-final class SkiDataCardParser extends AbstractSkiDataParser {
+class SkiDataCardParser extends AbstractSkiDataParser {
 
     /**
      * Constructor.
