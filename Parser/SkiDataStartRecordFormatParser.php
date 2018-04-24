@@ -18,9 +18,8 @@ use WBW\Library\SkiData\Entity\SkiDataStartRecordFormat;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\SkiData\Parser
- * @final
  */
-final class SkiDataStartRecordFormatParser extends AbstractSkiDataParser {
+class SkiDataStartRecordFormatParser extends AbstractSkiDataParser {
 
     /**
      * Constructor.
