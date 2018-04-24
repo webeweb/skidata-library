@@ -15,7 +15,7 @@ use WBW\Library\Core\Utility\Argument\BooleanUtility;
 use WBW\Library\SkiData\Entity\SkiDataUser;
 
 /**
- * SkiDataUserParser
+ * SkiData user parser.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\SkiData\Parser
