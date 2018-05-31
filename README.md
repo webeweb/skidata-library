@@ -22,7 +22,7 @@ Open a command console, enter your project directory and execute the following
 command to download the latest stable version of this package:
 
 ```bash
-$ composer require webeweb/skidata-library "~1.0@dev"
+$ composer require webeweb/skidata-library "^1.0"
 ```
 
 This command requires you to have Composer installed globally, as explained
@@ -56,3 +56,6 @@ $ vendor/bin/phpunit
 
 skidata-library is released under the LGPL License. See the bundled [LICENSE](LICENSE)
 file for details.
+
+Please note that the SkiData API is not free for use, see their [website](https://www.skidata.com/en/)
+for details.
