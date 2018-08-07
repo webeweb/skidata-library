@@ -11,7 +11,7 @@
 
 namespace WBW\Library\SkiData\Parser;
 
-use WBW\Library\Core\Utility\Argument\BooleanUtility;
+use WBW\Library\Core\Helper\Argument\BooleanHelper;
 use WBW\Library\SkiData\Entity\SkiDataCard;
 
 /**
@@ -94,17 +94,17 @@ class SkiDataCardParser extends AbstractSkiDataParser {
         $entity->setArticleNumber($this->decodeInteger($data[$i++]));
         $entity->setValidFrom($this->decodeDate($data[$i++]));
         $entity->setExpires($this->decodeDate($data[$i++]));
-        $entity->setBlocked(BooleanUtility::parseString($data[$i++]));
+        $entity->setBlocked(BooleanHelper::parseString($data[$i++]));
         $entity->setBlockedDate($this->decodeDate($data[$i++]));
         $entity->setProductionState($this->decodeInteger($data[$i++]));
         $entity->setReasonProduction($this->decodeInteger($data[$i++]));
         $entity->setProductionCounter($this->decodeInteger($data[$i++]));
-        $entity->setNeutral(BooleanUtility::parseString($data[$i++]));
-        $entity->setRetainTicketEntry(BooleanUtility::parseString($data[$i++]));
-        $entity->setEntryBarrierClosed(BooleanUtility::parseString($data[$i++]));
-        $entity->setExitBarrierClosed(BooleanUtility::parseString($data[$i++]));
-        $entity->setRetainTicketExit(BooleanUtility::parseString($data[$i++]));
-        $entity->setDisplayText(BooleanUtility::parseString($data[$i++]));
+        $entity->setNeutral(BooleanHelper::parseString($data[$i++]));
+        $entity->setRetainTicketEntry(BooleanHelper::parseString($data[$i++]));
+        $entity->setEntryBarrierClosed(BooleanHelper::parseString($data[$i++]));
+        $entity->setExitBarrierClosed(BooleanHelper::parseString($data[$i++]));
+        $entity->setRetainTicketExit(BooleanHelper::parseString($data[$i++]));
+        $entity->setDisplayText(BooleanHelper::parseString($data[$i++]));
         $entity->setDisplayText1($this->decodeString($data[$i++]));
         $entity->setDisplayText2($this->decodeString($data[$i++]));
         $entity->setPersonnalNo($this->decodeInteger($data[$i++]));
@@ -116,7 +116,7 @@ class SkiDataCardParser extends AbstractSkiDataParser {
         $entity->setSerialNo($this->decodeString($data[$i++]));
         $entity->setSuspendPeriodFrom($this->decodeDate($data[$i++]));
         $entity->setSuspendPeriodUntil($this->decodeDate($data[$i++]));
-        $entity->setUseValidCarParks(BooleanUtility::parseString($data[$i++]));
+        $entity->setUseValidCarParks(BooleanHelper::parseString($data[$i++]));
         $entity->setProductionFacilityNumber($this->decodeInteger($data[$i++]));
 
         // Return the entity.
