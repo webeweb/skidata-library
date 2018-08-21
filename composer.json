@@ -1,7 +1,7 @@
 {
     "name": "webeweb/skidata-library",
     "type": "library",
-    "description": "Integrate SkiData in your projects",
+    "description": "Integrate SkiData with your projects",
     "keywords": ["webeweb", "library", "skidata"],
     "homepage": "http://github.com/webeweb/skidata-library",
     "license": "LGPL-3.0-only",
