@@ -3,7 +3,7 @@ skidata-library
 
 [![Build Status](https://travis-ci.org/webeweb/skidata-library.svg?branch=master)](https://travis-ci.org/webeweb/skidata-library) [![Coverage Status](https://coveralls.io/repos/github/webeweb/skidata-library/badge.svg?branch=master)](https://coveralls.io/github/webeweb/skidata-library?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/webeweb/skidata-library/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/webeweb/skidata-library/?branch=master) [![Latest Stable Version](https://poser.pugx.org/webeweb/skidata-library/v/stable)](https://packagist.org/packages/webeweb/skidata-library) [![Latest Unstable Version](https://poser.pugx.org/webeweb/skidata-library/v/unstable)](https://packagist.org/packages/webeweb/skidata-library) [![License](https://poser.pugx.org/webeweb/skidata-library/license)](https://packagist.org/packages/webeweb/skidata-library) [![composer.lock](https://poser.pugx.org/webeweb/skidata-library/composerlock)](https://packagist.org/packages/webeweb/skidata-library)
 
-Integrate SkiData in your projects.
+Integrate SkiData with your projects.
 
 `skidata-library` uses a rolling release based on git master branch which is
 considered stable.
