@@ -5,9 +5,6 @@ skidata-library
 
 Integrate SkiData with your projects.
 
-`skidata-library` uses a rolling release based on git master branch which is
-considered stable.
-
 ---
 
 ## Compatibility
