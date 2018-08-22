@@ -11,7 +11,7 @@
 
 namespace WBW\Library\SkiData\Parser;
 
-use WBW\Library\Core\Helper\Argument\BooleanHelper;
+use WBW\Library\Core\Argument\BooleanHelper;
 use WBW\Library\SkiData\Entity\SkiDataUser;
 
 /**
