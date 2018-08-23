@@ -115,7 +115,7 @@ abstract class AbstractSkiDataParser implements SkiDataParserInterface {
      * @param integer $value The value.
      * @param integer $length The length.
      * @return string Returns the encoded integer.
-     * @throws SkiDataTooLongDataException Throws a SkiData too long data exception if the value exceeds the length.
+     * @throws SkiDataTooLongDataException Throws a too long data exception if the value exceeds the length.
      */
     final protected function encodeInteger($value, $length) {
         if (null === $value) {
@@ -135,7 +135,7 @@ abstract class AbstractSkiDataParser implements SkiDataParserInterface {
      * @param string $value The value.
      * @param integer $length The length.
      * @return string Returns the encoded string.
-     * @throws SkiDataTooLongDataException Throws a SkiData too long data exception if the value exceeds the length.
+     * @throws SkiDataTooLongDataException Throws a too long data exception if the value exceeds the length.
      */
     final protected function encodeString($value, $length = -1) {
         if (-1 !== $length && $length < strlen($value)) {
@@ -158,7 +158,7 @@ abstract class AbstractSkiDataParser implements SkiDataParserInterface {
      *
      * @param integer $versionRecordStructure The version of record structure.
      * @return boolean Returns true in case of success, false otherwise.
-     * @throws SkiDataMissingStartRecordFormatException Throws a SkiData missing start record format exception if the start record format is missing.
+     * @throws SkiDataMissingStartRecordFormatException Throws a missing start record format exception if the start record format is missing.
      */
     final protected function isVersionRecordStructure($versionRecordStructure) {
         if (null === $this->startRecordFormat) {
@@ -171,7 +171,7 @@ abstract class AbstractSkiDataParser implements SkiDataParserInterface {
      * Set the start record format.
      *
      * @param SkiDataStartRecordFormat $startRecordFormat The start record format.
-     * @return AbstractSkiDataParser Returns the SkiData parser.
+     * @return AbstractSkiDataParser Returns the parser.
      */
     final public function setStartRecordFormat(SkiDataStartRecordFormat $startRecordFormat) {
         $this->startRecordFormat = $startRecordFormat;

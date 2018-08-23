@@ -544,7 +544,7 @@ class SkiDataCustomer {
      * Set the accounting number.
      *
      * @param string $accountingNumber The accounting number.
-     * @return SkiDataCustomer Returns the SkiData customer entity.
+     * @return SkiDataCustomer Returns this customer entity.
      */
     public function setAccountingNumber($accountingNumber) {
         $this->accountingNumber = $accountingNumber;
@@ -555,7 +555,7 @@ class SkiDataCustomer {
      * Set the begin date.
      *
      * @param DateTime $beginDate The begin date.
-     * @return SkiDataCustomer Returns the SkiData customer entity.
+     * @return SkiDataCustomer Returns this customer entity.
      */
     public function setBeginDate(DateTime $beginDate = null) {
         $this->beginDate = $beginDate;
@@ -566,7 +566,7 @@ class SkiDataCustomer {
      * Set the blocked.
      *
      * @param boolean $blocked The blocked.
-     * @return SkiDataCustomer Returns the SkiData customer entity.
+     * @return SkiDataCustomer Returns this customer entity.
      */
     public function setBlocked($blocked) {
         $this->blocked = $blocked;
@@ -577,7 +577,7 @@ class SkiDataCustomer {
      * Set the blocked as of date.
      *
      * @param DateTime $blockedDate The blocked as of date.
-     * @return SkiDataCustomer Returns the SkiData customer entity.
+     * @return SkiDataCustomer Returns this customer entity.
      */
     public function setBlockedDate(DateTime $blockedDate = null) {
         $this->blockedDate = $blockedDate;
@@ -588,7 +588,7 @@ class SkiDataCustomer {
      * Set the couting neutral cards.
      *
      * @param boolean $countingNeutralCards The couting neutral cards.
-     * @return SkiDataCustomer Returns the SkiData customer entity.
+     * @return SkiDataCustomer Returns this customer entity.
      */
     public function setCountingNeutralCards($countingNeutralCards) {
         $this->countingNeutralCards = $countingNeutralCards;
@@ -599,7 +599,7 @@ class SkiDataCustomer {
      * Set the city.
      *
      * @param string $city The city.
-     * @return SkiDataCustomer Returns the SkiData customer entity.
+     * @return SkiDataCustomer Returns this customer entity.
      */
     public function setCity($city) {
         $this->city = $city;
@@ -610,7 +610,7 @@ class SkiDataCustomer {
      * Set the country.
      *
      * @param string $country The country.
-     * @return SkiDataCustomer Returns the SkiData customer entity.
+     * @return SkiDataCustomer Returns this customer entity.
      */
     public function setCountry($country) {
         $this->country = $country;
@@ -621,7 +621,7 @@ class SkiDataCustomer {
      * Set the customer number.
      *
      * @param integer $customerNumber The customer number.
-     * @return SkiDataCustomer Returns the SkiData customer entity.
+     * @return SkiDataCustomer Returns this customer entity.
      */
     public function setCustomerNumber($customerNumber) {
         $this->customerNumber = $customerNumber;
@@ -632,7 +632,7 @@ class SkiDataCustomer {
      * Set the date/time of last modification.
      *
      * @param DateTime $datetimeLastModification The date/time of last modification.
-     * @return SkiDataCustomer Returns the SkiData customer entity.
+     * @return SkiDataCustomer Returns this customer entity.
      */
     public function setDatetimeLastModification(DateTime $datetimeLastModification = null) {
         $this->datetimeLastModification = $datetimeLastModification;
@@ -643,7 +643,7 @@ class SkiDataCustomer {
      * Set the deleted record.
      *
      * @param boolean $deletedRecord The deleted record.
-     * @return SkiDataCustomer Returns the SkiData customer entity.
+     * @return SkiDataCustomer Returns this customer entity.
      */
     public function setDeletedRecord($deletedRecord) {
         $this->deletedRecord = $deletedRecord;
@@ -654,7 +654,7 @@ class SkiDataCustomer {
      * Set the deposit.
      *
      * @param integer $deposit The deposit.
-     * @return SkiDataCustomer Returns the SkiData customer entity.
+     * @return SkiDataCustomer Returns this customer entity.
      */
     public function setDeposit($deposit) {
         $this->deposit = $deposit;
@@ -665,7 +665,7 @@ class SkiDataCustomer {
      * Set the division.
      *
      * @param string $division The division.
-     * @return SkiDataCustomer Returns the SkiData customer entity.
+     * @return SkiDataCustomer Returns this customer entity.
      */
     public function setDivision($division) {
         $this->division = $division;
@@ -676,7 +676,7 @@ class SkiDataCustomer {
      * Set the email.
      *
      * @param string $email The email.
-     * @return SkiDataCustomer Returns the SkiData customer entity.
+     * @return SkiDataCustomer Returns this customer entity.
      */
     public function setEmail($email) {
         $this->email = $email;
@@ -687,7 +687,7 @@ class SkiDataCustomer {
      * Set the entry during max level allowed.
      *
      * @param boolean $entryMaxLevelAllowed The entry during max level allowed.
-     * @return SkiDataCustomer Returns the SkiData customer entity.
+     * @return SkiDataCustomer Returns this customer entity.
      */
     public function setEntryMaxLevelAllowed($entryMaxLevelAllowed) {
         $this->entryMaxLevelAllowed = $entryMaxLevelAllowed;
@@ -698,7 +698,7 @@ class SkiDataCustomer {
      * Set the firstname.
      *
      * @param string $firstname The firstname.
-     * @return SkiDataCustomer Returns the SkiData customer entity.
+     * @return SkiDataCustomer Returns this customer entity.
      */
     public function setFirstname($firstname) {
         $this->firstname = $firstname;
@@ -709,7 +709,7 @@ class SkiDataCustomer {
      * Set the group counting.
      *
      * @param boolean $groupCouting The group counting.
-     * @return SkiDataCustomer Returns the SkiData customer entity.
+     * @return SkiDataCustomer Returns this customer entity.
      */
     public function setGroupCounting($groupCouting) {
         $this->groupCounting = $groupCouting;
@@ -720,7 +720,7 @@ class SkiDataCustomer {
      * Set the ID document no.
      *
      * @param string $idDocumentNo The ID document no.
-     * @return SkiDataCustomer Returns the SkiData customer entity.
+     * @return SkiDataCustomer Returns this customer entity.
      */
     public function setIdDocumentNo($idDocumentNo) {
         $this->idDocumentNo = $idDocumentNo;
@@ -731,7 +731,7 @@ class SkiDataCustomer {
      * Set the max level per car park.
      *
      * @param boolean $maxLevelCarPark The max level per car park.
-     * @return SkiDataCustomer Returns the SkiData customer entity.
+     * @return SkiDataCustomer Returns this customer entity.
      */
     public function setMaxLevelCarPark($maxLevelCarPark) {
         $this->maxLevelCarPark = $maxLevelCarPark;
@@ -742,7 +742,7 @@ class SkiDataCustomer {
      * Set the maximum level.
      *
      * @param integer $maximumLevel The maximum level.
-     * @return SkiDataCustomer Returns the SkiData customer entity.
+     * @return SkiDataCustomer Returns this customer entity.
      */
     public function setMaximumLevel($maximumLevel) {
         $this->maximumLevel = $maximumLevel;
@@ -753,7 +753,7 @@ class SkiDataCustomer {
      * Set the nationality.
      *
      * @param string $nationality The nationality.
-     * @return SkiDataCustomer Returns the SkiData customer entity.
+     * @return SkiDataCustomer Returns this customer entity.
      */
     public function setNationality($nationality) {
         $this->nationality = $nationality;
@@ -764,7 +764,7 @@ class SkiDataCustomer {
      * Set the PCode.
      *
      * @param string $pCode The PCode.
-     * @return SkiDataCustomer Returns the SkiData customer entity.
+     * @return SkiDataCustomer Returns this customer entity.
      */
     public function setPCode($pCode) {
         $this->pCode = $pCode;
@@ -775,7 +775,7 @@ class SkiDataCustomer {
      * Set the remarks.
      *
      * @param string $remarks The remarks.
-     * @return SkiDataCustomer Returns the SkiData customer entity.
+     * @return SkiDataCustomer Returns this customer entity.
      */
     public function setRemarks($remarks) {
         $this->remarks = $remarks;
@@ -786,7 +786,7 @@ class SkiDataCustomer {
      * Set the remarks 2.
      *
      * @param string $remarks2 The remarks 2.
-     * @return SkiDataCustomer Returns the SkiData customer entity.
+     * @return SkiDataCustomer Returns this customer entity.
      */
     public function setRemarks2($remarks2) {
         $this->remarks2 = $remarks2;
@@ -797,7 +797,7 @@ class SkiDataCustomer {
      * Set the remarks 3.
      *
      * @param string $remarks3 The remarks 3.
-     * @return SkiDataCustomer Returns the SkiData customer entity.
+     * @return SkiDataCustomer Returns this customer entity.
      */
     public function setRemarks3($remarks3) {
         $this->remarks3 = $remarks3;
@@ -808,7 +808,7 @@ class SkiDataCustomer {
      * Set the rental agreements no.
      *
      * @param string $rentalAgreementNo The rental agreement no.
-     * @return SkiDataCustomer Returns the SkiData customer entity.
+     * @return SkiDataCustomer Returns this customer entity.
      */
     public function setRentalAgreementNo($rentalAgreementNo) {
         $this->rentalAgreementNo = $rentalAgreementNo;
@@ -819,7 +819,7 @@ class SkiDataCustomer {
      * Set the street.
      *
      * @param string $street The street.
-     * @return SkiDataCustomer Returns the SkiData customer entity.
+     * @return SkiDataCustomer Returns this customer entity.
      */
     public function setStreet($street) {
         $this->street = $street;
@@ -830,7 +830,7 @@ class SkiDataCustomer {
      * Set the surname.
      *
      * @param string $surname The surname.
-     * @return SkiDataCustomer Returns the SkiData customer entity.
+     * @return SkiDataCustomer Returns this customer entity.
      */
     public function setSurname($surname) {
         $this->surname = $surname;
@@ -841,7 +841,7 @@ class SkiDataCustomer {
      * Set the tax code.
      *
      * @param string $taxCode The tax code.
-     * @return SkiDataCustomer Returns the SkiData customer entity.
+     * @return SkiDataCustomer Returns this customer entity.
      */
     public function setTaxCode($taxCode) {
         $this->taxCode = $taxCode;
@@ -852,7 +852,7 @@ class SkiDataCustomer {
      * Set the telephone.
      *
      * @param string $telephone The telephone.
-     * @return SkiDataCustomer Returns the SkiData customer entity.
+     * @return SkiDataCustomer Returns this customer entity.
      */
     public function setTelephone($telephone) {
         $this->telephone = $telephone;
@@ -863,7 +863,7 @@ class SkiDataCustomer {
      * Set the termination date.
      *
      * @param DateTime $terminationDate The termination date.
-     * @return SkiDataCustomer Returns the SkiData customer entity.
+     * @return SkiDataCustomer Returns this customer entity.
      */
     public function setTerminationDate(DateTime $terminationDate = null) {
         $this->terminationDate = $terminationDate;
@@ -874,7 +874,7 @@ class SkiDataCustomer {
      * Set the ticket return allowed.
      *
      * @param boolean $ticketReturnAllowed The ticket return allowed.
-     * @return SkiDataCustomer Returns the SkiData customer entity.
+     * @return SkiDataCustomer Returns this customer entity.
      */
     public function setTicketReturnAllowed($ticketReturnAllowed) {
         $this->ticketReturnAllowed = $ticketReturnAllowed;
@@ -885,7 +885,7 @@ class SkiDataCustomer {
      * Set the title.
      *
      * @param string $title The title.
-     * @return SkiDataCustomer Returns the SkiData customer entity.
+     * @return SkiDataCustomer Returns this customer entity.
      */
     public function setTitle($title) {
         $this->title = $title;

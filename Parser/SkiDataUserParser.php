@@ -30,10 +30,10 @@ class SkiDataUserParser extends AbstractSkiDataParser {
     }
 
     /**
-     * Parse a SkiData user entity.
+     * Parse a user entity.
      *
-     * @param SkiDataUser $entity The SkiData user entity.
-     * @return string Returns the parsed SkiData user entity.
+     * @param SkiDataUser $entity The user entity.
+     * @return string Returns the parsed user entity.
      */
     public function parseEntity(SkiDataUser $entity) {
 
@@ -75,7 +75,7 @@ class SkiDataUserParser extends AbstractSkiDataParser {
      * Parse a line.
      *
      * @param string $line The line.
-     * @return SkiDataUser Returns a SkiData user entity.
+     * @return SkiDataUser Returns a user entity.
      */
     public function parseLine($line) {
 

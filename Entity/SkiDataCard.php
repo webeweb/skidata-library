@@ -439,9 +439,9 @@ class SkiDataCard {
     }
 
     /**
-     * Get the SkiData ticket number.
+     * Get the ticket number.
      *
-     * @return string Returns the SkiData ticket number.
+     * @return string Returns the ticket number.
      */
     public function getTicketNumber() {
         return $this->ticketNumber;
@@ -496,7 +496,7 @@ class SkiDataCard {
      * Set the article number.
      *
      * @param integer $articleNumber The article number.
-     * @return SkiDataCard Returns the SkiData card entity.
+     * @return SkiDataCard Returns this card entity.
      */
     public function setArticleNumber($articleNumber) {
         $this->articleNumber = $articleNumber;
@@ -507,7 +507,7 @@ class SkiDataCard {
      * Set the blocked.
      *
      * @param boolean $blocked The blocked.
-     * @return SkiDataCard Returns the SkiData card entity.
+     * @return SkiDataCard Returns this card entity.
      */
     public function setBlocked($blocked) {
         $this->blocked = $blocked;
@@ -518,7 +518,7 @@ class SkiDataCard {
      * Set the blocked as of date.
      *
      * @param DateTime $blockedDate The blocked as of date.
-     * @return SkiDataCard Returns the SkiData card entity.
+     * @return SkiDataCard Returns this card entity.
      */
     public function setBlockedDate(DateTime $blockedDate = null) {
         $this->blockedDate = $blockedDate;
@@ -529,7 +529,7 @@ class SkiDataCard {
      * Set the currency residual value.
      *
      * @param string $currencyResidualValue The currency residual value.
-     * @return SkiDataCard Returns the SkiData card entity.
+     * @return SkiDataCard Returns this card entity.
      */
     public function setCurrencyResidualValue($currencyResidualValue) {
         $this->currencyResidualValue = $currencyResidualValue;
@@ -540,7 +540,7 @@ class SkiDataCard {
      * Set the display text.
      *
      * @param boolean $displayText The display text.
-     * @return SkiDataCard Returns the SkiData card entity.
+     * @return SkiDataCard Returns this card entity.
      */
     public function setDisplayText($displayText) {
         $this->displayText = $displayText;
@@ -551,7 +551,7 @@ class SkiDataCard {
      * Set the display text 1.
      *
      * @param string $displayText1 The display text 1.
-     * @return SkiDataCard Returns the SkiData card entity.
+     * @return SkiDataCard Returns this card entity.
      */
     public function setDisplayText1($displayText1) {
         $this->displayText1 = $displayText1;
@@ -562,7 +562,7 @@ class SkiDataCard {
      * Set the display text 2.
      *
      * @param string $displayText2 The display text 2.
-     * @return SkiDataCard Returns the SkiData card entity.
+     * @return SkiDataCard Returns this card entity.
      */
     public function setDisplayText2($displayText2) {
         $this->displayText2 = $displayText2;
@@ -573,7 +573,7 @@ class SkiDataCard {
      * Set the entry barrier closed.
      *
      * @param boolean $entryBarrierClosed The entry barrier closed.
-     * @return SkiDataCard Returns the SkiData card entity.
+     * @return SkiDataCard Returns this card entity.
      */
     public function setEntryBarrierClosed($entryBarrierClosed) {
         $this->entryBarrierClosed = $entryBarrierClosed;
@@ -584,7 +584,7 @@ class SkiDataCard {
      * Set the exit barrier closed.
      *
      * @param boolean $exitBarrierClosed The exit barrier closed.
-     * @return SkiDataCard Returns the SkiData card entity.
+     * @return SkiDataCard Returns this card entity.
      */
     public function setExitBarrierClosed($exitBarrierClosed) {
         $this->exitBarrierClosed = $exitBarrierClosed;
@@ -595,7 +595,7 @@ class SkiDataCard {
      * Set the expires.
      *
      * @param DateTime $expires The expires.
-     * @return SkiDataCard Returns the SkiData card entity.
+     * @return SkiDataCard Returns this card entity.
      */
     public function setExpires(DateTime $expires = null) {
         $this->expires = $expires;
@@ -606,7 +606,7 @@ class SkiDataCard {
      * Set the is neutral.
      *
      * @param boolean $isNeutral The is neutral.
-     * @return SkiDataCard Returns the SkiData card entity.
+     * @return SkiDataCard Returns this card entity.
      */
     public function setNeutral($isNeutral) {
         $this->isNeutral = $isNeutral;
@@ -617,7 +617,7 @@ class SkiDataCard {
      * Set the personnal no.
      *
      * @param integer $personnalNo The personnal no.
-     * @return SkiDataCard Returns the SkiData card entity.
+     * @return SkiDataCard Returns this card entity.
      */
     public function setPersonnalNo($personnalNo) {
         $this->personnalNo = $personnalNo;
@@ -628,7 +628,7 @@ class SkiDataCard {
      * Set the production counter.
      *
      * @param integer $productionCounter The production counter.
-     * @return SkiDataCard Returns the SkiData card entity.
+     * @return SkiDataCard Returns this card entity.
      */
     public function setProductionCounter($productionCounter) {
         $this->productionCounter = $productionCounter;
@@ -639,7 +639,7 @@ class SkiDataCard {
      * Set the production facility number.
      *
      * @param integer $productionFacilityNumber The production facility number.
-     * @return SkiDataCard Returns the SkiData card entity.
+     * @return SkiDataCard Returns this card entity.
      */
     public function setProductionFacilityNumber($productionFacilityNumber) {
         $this->productionFacilityNumber = $productionFacilityNumber;
@@ -650,7 +650,7 @@ class SkiDataCard {
      * Set the production state.
      *
      * @param integer $productionState The production state.
-     * @return SkiDataCard Returns the SkiData card entity.
+     * @return SkiDataCard Returns this card entity.
      */
     public function setProductionState($productionState) {
         $this->productionState = $productionState;
@@ -661,7 +661,7 @@ class SkiDataCard {
      * Set the reason for production.
      *
      * @param integer $reasonProduction The reason for production.
-     * @return SkiDataCard Returns the SkiData card entity.
+     * @return SkiDataCard Returns this card entity.
      */
     public function setReasonProduction($reasonProduction) {
         $this->reasonProduction = $reasonProduction;
@@ -672,7 +672,7 @@ class SkiDataCard {
      * Set the residual value.
      *
      * @param integer $residualValue The residual value.
-     * @return SkiDataCard Returns the SkiData card entity.
+     * @return SkiDataCard Returns this card entity.
      */
     public function setResidualValue($residualValue) {
         $this->residualValue = $residualValue;
@@ -683,7 +683,7 @@ class SkiDataCard {
      * Set the retain ticket at entry.
      *
      * @param boolean $retainTicketEntry The retain ticket at entry.
-     * @return SkiDataCard Returns the SkiData card entity.
+     * @return SkiDataCard Returns this card entity.
      */
     public function setRetainTicketEntry($retainTicketEntry) {
         $this->retainTicketEntry = $retainTicketEntry;
@@ -694,7 +694,7 @@ class SkiDataCard {
      * Set the retain ticket at exit.
      *
      * @param boolean $retainTicketExit The retain ticket at exit.
-     * @return SkiDataCard Returns the SkiData card entity.
+     * @return SkiDataCard Returns this card entity.
      */
     public function setRetainTicketExit($retainTicketExit) {
         $this->retainTicketExit = $retainTicketExit;
@@ -705,7 +705,7 @@ class SkiDataCard {
      * Set the serial no.
      *
      * @param string $serialNo The serial no.
-     * @return SkiDataCard Returns the SkiData card entity.
+     * @return SkiDataCard Returns this card entity.
      */
     public function setSerialNo($serialNo) {
         $this->serialNo = $serialNo;
@@ -716,7 +716,7 @@ class SkiDataCard {
      * Set the serial number KeyCard/Swatch.
      *
      * @param string $serialNumberKeyCardSwatch The serial number KeyCard/Swatch.
-     * @return SkiDataCard Returns the SkiData card entity.
+     * @return SkiDataCard Returns this card entity.
      */
     public function setSerialNumberKeyCardSwatch($serialNumberKeyCardSwatch) {
         $this->serialNumberKeyCardSwatch = $serialNumberKeyCardSwatch;
@@ -727,7 +727,7 @@ class SkiDataCard {
      * Set the suspend period from.
      *
      * @param DateTime $suspendPeriodFrom The suspend period from.
-     * @return SkiDataCard Returns the SkiData card entity.
+     * @return SkiDataCard Returns this card entity.
      */
     public function setSuspendPeriodFrom(DateTime $suspendPeriodFrom = null) {
         $this->suspendPeriodFrom = $suspendPeriodFrom;
@@ -738,7 +738,7 @@ class SkiDataCard {
      * Set the suspend period until.
      *
      * @param DateTime $suspendPeriodUntil The suspend period until.
-     * @return SkiDataCard Returns the SkiData card entity.
+     * @return SkiDataCard Returns this card entity.
      */
     public function setSuspendPeriodUntil(DateTime $suspendPeriodUntil = null) {
         $this->suspendPeriodUntil = $suspendPeriodUntil;
@@ -746,10 +746,10 @@ class SkiDataCard {
     }
 
     /**
-     * Set the SkiData ticket number.
+     * Set the ticket number.
      *
-     * @param string $ticketNumber The SkiData ticket number.
-     * @return SkiDataCard Returns the SkiData card entity.
+     * @param string $ticketNumber The ticket number.
+     * @return SkiDataCard Returns this card entity.
      */
     public function setTicketNumber($ticketNumber) {
         $this->ticketNumber = $ticketNumber;
@@ -760,7 +760,7 @@ class SkiDataCard {
      * Set the ticket sub type.
      *
      * @param string $ticketSubType The ticket sub type.
-     * @return SkiDataCard Returns the SkiData card entity.
+     * @return SkiDataCard Returns this card entity.
      */
     public function setTicketSubType($ticketSubType) {
         $this->ticketSubType = $ticketSubType;
@@ -771,7 +771,7 @@ class SkiDataCard {
      * Set the ticket type.
      *
      * @param integer $ticketType The ticket type.
-     * @return SkiDataCard Returns the SkiData card entity.
+     * @return SkiDataCard Returns this card entity.
      */
     public function setTicketType($ticketType) {
         $this->ticketType = $ticketType;
@@ -782,7 +782,7 @@ class SkiDataCard {
      * Set the use valid car parks.
      *
      * @param boolean $useValidCarParks The use valid car parks.
-     * @return SkiDataCard Returns the SkiData card entity.
+     * @return SkiDataCard Returns this card entity.
      */
     public function setUseValidCarParks($useValidCarParks) {
         $this->useValidCarParks = $useValidCarParks;
@@ -793,7 +793,7 @@ class SkiDataCard {
      * Set the user number.
      *
      * @param integer $userNumber The user number.
-     * @return SkiDataCard Returns the SkiData card entity.
+     * @return SkiDataCard Returns this card entity.
      */
     public function setUserNumber($userNumber) {
         $this->userNumber = $userNumber;
@@ -804,7 +804,7 @@ class SkiDataCard {
      * Set the valid from.
      *
      * @param DateTime $validFrom The valid from.
-     * @return SkiDataCard Returns the SkiData card entity.
+     * @return SkiDataCard Returns this card entity.
      */
     public function setValidFrom(DateTime $validFrom = null) {
         $this->validFrom = $validFrom;

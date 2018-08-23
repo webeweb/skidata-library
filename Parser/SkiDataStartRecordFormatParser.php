@@ -29,10 +29,10 @@ class SkiDataStartRecordFormatParser extends AbstractSkiDataParser {
     }
 
     /**
-     * Parse a SkiData start record format entity.
+     * Parse a start record format entity.
      *
-     * @param SkiDataStartRecordFormat $entity The SkiData start record format entity.
-     * @return string Returns the parsed SkiData start record format entity.
+     * @param SkiDataStartRecordFormat $entity The start record format entity.
+     * @return string Returns the parsed start record format entity.
      */
     public function parseEntity(SkiDataStartRecordFormat $entity) {
 
@@ -53,7 +53,7 @@ class SkiDataStartRecordFormatParser extends AbstractSkiDataParser {
      * Parse a line.
      *
      * @param string $line The line.
-     * @return SkiDataStartRecordFormat Returns a SkiData start record format entity.
+     * @return SkiDataStartRecordFormat Returns a start record format entity.
      */
     public function parseLine($line) {
 

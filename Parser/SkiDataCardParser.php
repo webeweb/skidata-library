@@ -30,10 +30,10 @@ class SkiDataCardParser extends AbstractSkiDataParser {
     }
 
     /**
-     * Parse a SkiData card entity.
+     * Parse a card entity.
      *
-     * @param SkiDataCard $entity The SkiData card entity.
-     * @return string Returns the parsed SkiData card entity.
+     * @param SkiDataCard $entity The card entity.
+     * @return string Returns the parsed card entity.
      */
     public function parseEntity(SkiDataCard $entity) {
 
@@ -78,7 +78,7 @@ class SkiDataCardParser extends AbstractSkiDataParser {
      * Parse a line.
      *
      * @param string $line The line.
-     * @return SkiDataCard Returns a SkiData card entity.
+     * @return SkiDataCard Returns a card entity.
      */
     public function parseLine($line) {
 
