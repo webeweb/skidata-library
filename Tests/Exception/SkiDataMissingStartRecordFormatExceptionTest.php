@@ -31,7 +31,9 @@ final class SkiDataMissingStartRecordFormatExceptionTest extends PHPUnit_Framewo
     public function testConstruct() {
 
         $ex = new SkiDataMissingStartRecordFormatException("", 0);
-        $this->assertEquals("The start record format is missing", $ex->getMessage());
+
+        $res = "The start record format is missing";
+        $this->assertEquals($res, $ex->getMessage());
     }
 
 }

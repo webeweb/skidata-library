@@ -31,7 +31,9 @@ final class SkiDataTooLongDataExceptionTest extends PHPUnit_Framework_TestCase {
     public function testConstruct() {
 
         $ex = new SkiDataTooLongDataException("", 0);
-        $this->assertEquals("The data \"\" exceeds the length \"0\" allowed", $ex->getMessage());
+
+        $res = "The data \"\" exceeds the length \"0\" allowed";
+        $this->assertEquals($res, $ex->getMessage());
     }
 
 }

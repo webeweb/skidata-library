@@ -61,10 +61,13 @@ final class SkiDataStartRecordFormatParserTest extends PHPUnit_Framework_TestCas
         $obj->setNumberRecords(18);
         $obj->setCurrency("EUR");
 
+        //
         $res = '190000;0202747;20170921;00018;"EUR"';
         $this->assertEquals($res, (new SkiDataStartRecordFormatParser())->parseEntity($obj));
 
+        //
         try {
+
             $obj->setVersionRecordStructure(2000000);
             (new SkiDataStartRecordFormatParser())->parseEntity($obj);
         } catch (Exception $ex) {
@@ -73,7 +76,9 @@ final class SkiDataStartRecordFormatParserTest extends PHPUnit_Framework_TestCas
             $this->assertEquals("The data \"2000000\" exceeds the length \"6\" allowed", $ex->getMessage());
         }
 
+        //
         try {
+
             $obj->setVersionRecordStructure(190000);
             $obj->setCurrency("Exception");
             (new SkiDataStartRecordFormatParser())->parseEntity($obj);
