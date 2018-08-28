@@ -51,7 +51,7 @@ $ vendor/bin/phpunit
 
 ## License
 
-skidata-library is released under the LGPL License. See the bundled [LICENSE](LICENSE)
+`skidata-library` is released under the LGPL License. See the bundled [LICENSE](LICENSE)
 file for details.
 
 Please note that the SkiData API is not free for use, see their [website](https://www.skidata.com/en/)
