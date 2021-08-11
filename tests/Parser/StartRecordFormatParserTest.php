@@ -13,10 +13,10 @@ namespace WBW\Library\SkiData\Tests\Parser;
 
 use DateTime;
 use Exception;
-use WBW\Library\SkiData\Tests\AbstractTestCase;
 use WBW\Library\SkiData\Exception\TooLongDataException;
 use WBW\Library\SkiData\Model\StartRecordFormat;
 use WBW\Library\SkiData\Parser\StartRecordFormatParser;
+use WBW\Library\SkiData\Tests\AbstractTestCase;
 
 /**
  * Start record format parser test.

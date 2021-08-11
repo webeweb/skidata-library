@@ -11,8 +11,8 @@
 
 namespace WBW\Library\SkiData\Tests\API;
 
-use WBW\Library\SkiData\Tests\AbstractTestCase;
 use WBW\Library\SkiData\API\ParserInterface;
+use WBW\Library\SkiData\Tests\AbstractTestCase;
 
 /**
  * Parser interface test.

@@ -11,8 +11,8 @@
 
 namespace WBW\Library\SkiData\Tests\Exception;
 
-use WBW\Library\SkiData\Tests\AbstractTestCase;
 use WBW\Library\SkiData\Exception\TooLongDataException;
+use WBW\Library\SkiData\Tests\AbstractTestCase;
 
 /**
  * Too long data exception test.

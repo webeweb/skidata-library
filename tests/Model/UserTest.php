@@ -13,8 +13,8 @@ namespace WBW\Library\SkiData\Tests\Model;
 
 use DateTime;
 use Exception;
-use WBW\Library\SkiData\Tests\AbstractTestCase;
 use WBW\Library\SkiData\Model\User;
+use WBW\Library\SkiData\Tests\AbstractTestCase;
 
 /**
  * User test.

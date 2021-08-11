@@ -13,8 +13,8 @@ namespace WBW\Library\SkiData\Tests\Model;
 
 use DateTime;
 use Exception;
-use WBW\Library\SkiData\Tests\AbstractTestCase;
 use WBW\Library\SkiData\Model\StartRecordFormat;
+use WBW\Library\SkiData\Tests\AbstractTestCase;
 
 /**
  * Start record format test.

@@ -11,8 +11,8 @@
 
 namespace WBW\Library\SkiData\Tests\Exception;
 
-use WBW\Library\SkiData\Tests\AbstractTestCase;
 use WBW\Library\SkiData\Exception\MissingStartRecordFormatException;
+use WBW\Library\SkiData\Tests\AbstractTestCase;
 
 /**
  * Missing start record format exception test.

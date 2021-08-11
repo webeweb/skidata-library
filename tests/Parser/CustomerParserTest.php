@@ -13,9 +13,9 @@ namespace WBW\Library\SkiData\Tests\Parser;
 
 use DateTime;
 use Exception;
-use WBW\Library\SkiData\Tests\AbstractTestCase;
 use WBW\Library\SkiData\Model\Customer;
 use WBW\Library\SkiData\Parser\CustomerParser;
+use WBW\Library\SkiData\Tests\AbstractTestCase;
 
 /**
  * Customer parser test.
