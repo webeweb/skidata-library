@@ -1,9 +1,9 @@
 <?php
 
-/**
- * This file is part of the skidata-library package.
+/*
+ * This file is part of the core-library package.
  *
- * (c) 2017 WEBEWEB
+ * (c) 2018 WEBEWEB
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -12,27 +12,28 @@
 namespace WBW\Library\SkiData\Tests\Parser;
 
 use DateTime;
-use PHPUnit_Framework_TestCase;
-use WBW\Library\SkiData\Entity\SkiDataCard;
-use WBW\Library\SkiData\Parser\SkiDataCardParser;
+use Exception;
+use WBW\Library\SkiData\Tests\AbstractTestCase;
+use WBW\Library\SkiData\Model\Card;
+use WBW\Library\SkiData\Parser\CardParser;
 
 /**
- * SkiData card parser test.
+ * Card parser test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\SkiData\Tests\Parser
- * @final
  */
-final class SkiDataCardParserTest extends PHPUnit_Framework_TestCase {
+class CardParserTest extends AbstractTestCase {
 
     /**
      * Tests the parseEntity() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
-    public function testParseEntity() {
+    public function testParseEntity(): void {
 
-        $obj = new SkiDataCard();
+        $obj = new Card();
         $obj->setTicketNumber("ticketNumber");
         $obj->setUserNumber(987654321);
         $obj->setArticleNumber(321);
@@ -43,7 +44,7 @@ final class SkiDataCardParserTest extends PHPUnit_Framework_TestCase {
         $obj->setProductionState(2);
         $obj->setReasonProduction(0);
         $obj->setProductionCounter(3412);
-        $obj->setNeutral(false);
+        $obj->setIsNeutral(false);
         $obj->setRetainTicketEntry(false);
         $obj->setEntryBarrierClosed(true);
         $obj->setExitBarrierClosed(true);
@@ -51,7 +52,7 @@ final class SkiDataCardParserTest extends PHPUnit_Framework_TestCase {
         $obj->setDisplayText(true);
         $obj->setDisplayText1("displayText1");
         $obj->setDisplayText2("displayText2");
-        $obj->setPersonnalNo(9876);
+        $obj->setPersonalNo(9876);
         $obj->setResidualValue(123456789012);
         $obj->setSerialNumberKeyCardSwatch("serialNumberKeyCard");
         $obj->setCurrencyResidualValue("3.0");
@@ -64,19 +65,20 @@ final class SkiDataCardParserTest extends PHPUnit_Framework_TestCase {
         $obj->setProductionFacilityNumber(1234567);
 
         $res = '"ticketNumber";987654321;321;20170920;20170921;1;;2;0;3412;0;0;1;1;0;1;"displayText1";"displayText2";9876;123456789012;"serialNumberKeyCard";"3.0";3;"ticke";"serialNo";;20170922;1;1234567';
-        $this->assertEquals($res, (new SkiDataCardParser())->parseEntity($obj));
+        $this->assertEquals($res, (new CardParser())->parseEntity($obj));
     }
 
     /**
      * Tests the parseLine() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
-    public function testParseLine() {
+    public function testParseLine(): void {
 
         $obj = '"ticketNumber";987654321;321;20170920;20170921;1;;2;0;3412;0;0;1;1;0;1;"displayText1";"displayText2";9876;123456789012;"serialNumberKeyCard";"3.0";3;"ticke";"serialNo";;20170922;1;1234567';
 
-        $res = (new SkiDataCardParser())->parseLine($obj);
+        $res = (new CardParser())->parseLine($obj);
         $this->assertEquals("ticketNumber", $res->getTicketNumber());
         $this->assertEquals(987654321, $res->getUserNumber());
         $this->assertEquals(321, $res->getArticleNumber());
@@ -87,7 +89,7 @@ final class SkiDataCardParserTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(2, $res->getProductionState());
         $this->assertEquals(0, $res->getReasonProduction());
         $this->assertEquals(3412, $res->getProductionCounter());
-        $this->assertFalse($res->getNeutral());
+        $this->assertFalse($res->getIsNeutral());
         $this->assertFalse($res->getRetainTicketEntry());
         $this->assertTrue($res->getEntryBarrierClosed());
         $this->assertTrue($res->getExitBarrierClosed());
@@ -95,7 +97,7 @@ final class SkiDataCardParserTest extends PHPUnit_Framework_TestCase {
         $this->assertTrue($res->getDisplayText());
         $this->assertEquals("displayText1", $res->getDisplayText1());
         $this->assertEquals("displayText2", $res->getDisplayText2());
-        $this->assertEquals(9876, $res->getPersonnalNo());
+        $this->assertEquals(9876, $res->getPersonalNo());
         $this->assertEquals(123456789012, $res->getResidualValue());
         $this->assertEquals("serialNumberKeyCard", $res->getSerialNumberKeyCardSwatch());
         $this->assertEquals("3.0", $res->getCurrencyResidualValue());
@@ -107,5 +109,4 @@ final class SkiDataCardParserTest extends PHPUnit_Framework_TestCase {
         $this->assertTrue($res->getUseValidCarParks());
         $this->assertEquals(1234567, $res->getProductionFacilityNumber());
     }
-
 }
