@@ -1,9 +1,9 @@
 <?php
 
-/**
- * This file is part of the skidata-library package.
+/*
+ * This file is part of the core-library package.
  *
- * (c) 2017 WEBEWEB
+ * (c) 2018 WEBEWEB
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -11,29 +11,27 @@
 
 namespace WBW\Library\SkiData\Tests\Exception;
 
-use PHPUnit_Framework_TestCase;
-use WBW\Library\SkiData\Exception\SkiDataMissingStartRecordFormatException;
+use WBW\Library\SkiData\Tests\AbstractTestCase;
+use WBW\Library\SkiData\Exception\MissingStartRecordFormatException;
 
 /**
- * SkiData missing start record format exception test.
+ * Missing start record format exception test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\SkiData\Tests\Exception
- * @final
  */
-final class SkiDataMissingStartRecordFormatExceptionTest extends PHPUnit_Framework_TestCase {
+class MissingStartRecordFormatExceptionTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.
      *
      * @return void
      */
-    public function testConstruct() {
+    public function test__construct(): void {
 
-        $ex = new SkiDataMissingStartRecordFormatException("", 0);
+        $ex = new MissingStartRecordFormatException();
 
         $res = "The start record format is missing";
         $this->assertEquals($res, $ex->getMessage());
     }
-
 }
