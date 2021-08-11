@@ -1,9 +1,9 @@
 <?php
 
-/**
- * This file is part of the skidata-library package.
+/*
+ * This file is part of the core-library package.
  *
- * (c) 2017 WEBEWEB
+ * (c) 2018 WEBEWEB
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -12,27 +12,28 @@
 namespace WBW\Library\SkiData\Tests\Parser;
 
 use DateTime;
-use PHPUnit_Framework_TestCase;
-use WBW\Library\SkiData\Entity\SkiDataCustomer;
-use WBW\Library\SkiData\Parser\SkiDataCustomerParser;
+use Exception;
+use WBW\Library\SkiData\Tests\AbstractTestCase;
+use WBW\Library\SkiData\Model\Customer;
+use WBW\Library\SkiData\Parser\CustomerParser;
 
 /**
- * SkiData customer parser test.
+ * Customer parser test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\SkiData\Tests\Parser
- * @final
  */
-final class SkiDataCustomerParserTest extends PHPUnit_Framework_TestCase {
+class CustomerParserTest extends AbstractTestCase {
 
     /**
      * Tests the parseEntity() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
-    public function testParseEntity() {
+    public function testParseEntity(): void {
 
-        $obj = new SkiDataCustomer();
+        $obj = new Customer();
         $obj->setCustomerNumber(123456789);
         $obj->setTitle("title");
         $obj->setSurname("surname");
@@ -67,19 +68,20 @@ final class SkiDataCustomerParserTest extends PHPUnit_Framework_TestCase {
         $obj->setAccountingNumber("accountingNumber");
 
         $res = '123456789;"title";"surname";"firstname";"street";"pCode";"city";"abc";"taxCode";"idDocumentNo";"telephone";"rentalAgreementNo";20170921;20170930;000000123456;1234;"remarks";20170921 103500;0;;0;1;1;0;1;"remarks2";"remarks3";"division";"email";0;"abc";"accountingNumber"';
-        $this->assertEquals($res, (new SkiDataCustomerParser())->parseEntity($obj));
+        $this->assertEquals($res, (new CustomerParser())->parseEntity($obj));
     }
 
     /**
      * Tests the parseLine() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
-    public function testParseLine() {
+    public function testParseLine(): void {
 
         $obj = '123456789;"title";"surname";"firstname";"street";"pCode";"city";"abc";"taxCode";"idDocumentNo";"telephone";"rentalAgreementNo";20170921;20170930;000000123456;1234;"remarks";20170921 103500;0;;0;1;1;0;1;"remarks2";"remarks3";"division";"email";0;"abc";"accountingNumber"';
 
-        $res = (new SkiDataCustomerParser())->parseLine($obj);
+        $res = (new CustomerParser())->parseLine($obj);
         $this->assertEquals(123456789, $res->getCustomerNumber());
         $this->assertEquals("title", $res->getTitle());
         $this->assertEquals("surname", $res->getSurname());
@@ -113,5 +115,4 @@ final class SkiDataCustomerParserTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals("abc", $res->getNationality());
         $this->assertEquals("accountingNumber", $res->getAccountingNumber());
     }
-
 }
