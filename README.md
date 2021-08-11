@@ -1,21 +1,22 @@
 skidata-library
 ===============
 
-[![Build Status](https://travis-ci.org/webeweb/skidata-library.svg?branch=master)](https://travis-ci.org/webeweb/skidata-library) [![Coverage Status](https://coveralls.io/repos/github/webeweb/skidata-library/badge.svg?branch=master)](https://coveralls.io/github/webeweb/skidata-library?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/webeweb/skidata-library/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/webeweb/skidata-library/?branch=master) [![Latest Stable Version](https://poser.pugx.org/webeweb/skidata-library/v/stable)](https://packagist.org/packages/webeweb/skidata-library) [![Latest Unstable Version](https://poser.pugx.org/webeweb/skidata-library/v/unstable)](https://packagist.org/packages/webeweb/skidata-library) [![License](https://poser.pugx.org/webeweb/skidata-library/license)](https://packagist.org/packages/webeweb/skidata-library) [![composer.lock](https://poser.pugx.org/webeweb/skidata-library/composerlock)](https://packagist.org/packages/webeweb/skidata-library)
+[![Build Status](https://img.shields.io/github/workflow/status/webeweb/skidata-library/build?style=flat-square)](https://github.com/webeweb/skidata-library/actions)
+[![Coverage Status](https://img.shields.io/coveralls/github/webeweb/skidata-library/master.svg?style=flat-square)](https://coveralls.io/github/webeweb/skidata-library?branch=master)
+[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/quality/g/webeweb/skidata-library/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/webeweb/skidata-library/?branch=master)
+[![Latest Stable Version](https://img.shields.io/packagist/v/webeweb/skidata-library.svg?style=flat-square)](https://packagist.org/packages/webeweb/skidata-library)
+[![Latest Unstable Version](https://img.shields.io/packagist/vpre/webeweb/skidata-library.svg?style=flat-square)](https://packagist.org/packages/webeweb/skidata-library)
+[![License](https://img.shields.io/packagist/l/webeweb/skidata-library.svg?style=flat-square)](https://packagist.org/packages/webeweb/skidata-library)
+[![composer.lock](https://img.shields.io/badge/.lock-uncommited-important.svg?style=flat-square)](https://packagist.org/packages/webeweb/skidata-library)
 
-Integrate SkiData with your projects.
+Integrate SkiData with your projects
 
-> IMPORTANT NOTICE: This package is no longer maintained and its classes have
-> been migrated into package "core-library" (available into version up to 4.2.0
-> and more) [Core library](https://github.com/webeweb/core-library/)
-
----
+If you like this package, pay me a beer (or a coffee)
+[![paypal.me](https://img.shields.io/badge/paypal.me-webeweb-0070ba.svg?style=flat-square&logo=paypal)](https://www.paypal.me/webeweb)
 
 ## Compatibility
 
-[![PHP](https://img.shields.io/badge/PHP-%5E5.6%7C%5E7.0-blue.svg)](http://php.net) [![HHVM](https://img.shields.io/badge/HHVM-ready-orange.svg)](https://hhvm.com/)
-
----
+[![PHP](https://img.shields.io/packagist/php-v/webeweb/skidata-library.svg?style=flat-square)](http://php.net)
 
 ## Installation
 
@@ -23,14 +24,16 @@ Open a command console, enter your project directory and execute the following
 command to download the latest stable version of this package:
 
 ```bash
-$ composer require webeweb/skidata-library "^1.0"
+$ composer require webeweb/skidata-library
 ```
 
 This command requires you to have Composer installed globally, as explained in
 the [installation chapter](https://getcomposer.org/doc/00-intro.md) of the
 Composer documentation.
 
----
+## Usage
+
+Read the [documentation](doc/index.md).
 
 ## Testing
 
@@ -39,9 +42,8 @@ Open a command console and execute the following commands to download the latest
 stable version of this package:
 
 ```bash
-$ mkdir skidata-library
+$ git clone https://github.com/webeweb/skidata-library.git
 $ cd skidata-library
-$ git clone git@github.com:webeweb/skidata-library.git .
 $ composer install
 ```
 
@@ -51,12 +53,12 @@ Once all required libraries are installed then do:
 $ vendor/bin/phpunit
 ```
 
----
-
 ## License
 
-`skidata-library` is released under the LGPL License. See the bundled [LICENSE](LICENSE)
+`skidata-library` is released under the MIT License. See the bundled [LICENSE](LICENSE)
 file for details.
 
-Please note that the SkiData API is not free for use, see their [website](https://www.skidata.com/en/)
-for details.
+## Donate
+
+If you like this work, please consider donating at
+[![paypal.me](https://img.shields.io/badge/paypal.me-webeweb-0070ba.svg?style=flat-square&logo=paypal)](https://www.paypal.me/webeweb)
