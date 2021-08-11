@@ -1,42 +1,39 @@
 <?php
 
-/**
- * Disclaimer: This source code is protected by copyright law and by
- * international conventions.
+/*
+ * This file is part of the core-library package.
  *
- * Any reproduction or partial or total distribution of the source code, by any
- * means whatsoever, is strictly forbidden.
+ * (c) 2018 WEBEWEB
  *
- * Anyone not complying with these provisions will be guilty of the offense of
- * infringement and the penal sanctions provided for by law.
- *
- * © 2017 All rights reserved.
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace WBW\Library\SkiData\Tests\Parser;
 
 use DateTime;
-use PHPUnit_Framework_TestCase;
-use WBW\Library\SkiData\Entity\SkiDataUser;
-use WBW\Library\SkiData\Parser\SkiDataUserParser;
+use Exception;
+use WBW\Library\SkiData\Tests\AbstractTestCase;
+use WBW\Library\SkiData\Model\User;
+use WBW\Library\SkiData\Parser\UserParser;
 
 /**
- * SkidData user parser test.
+ * User parser test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Library\SkiData\Tests\Parser
- * @final
  */
-final class SkidDataUserParserTest extends PHPUnit_Framework_TestCase {
+class UserParserTest extends AbstractTestCase {
 
     /**
      * Tests the parseEntity() method.
      *
      * @return void
+     * @throws Exception Throws an exception if an error occurs.
      */
-    public function testParseEntity() {
+    public function testParseEntity(): void {
 
-        $obj = new SkiDataUser();
+        $obj = new User();
         $obj->setUserNumber(987654321);
         $obj->setCustomerNumber(123456789);
         $obj->setTitle("title");
@@ -65,19 +62,20 @@ final class SkidDataUserParserTest extends PHPUnit_Framework_TestCase {
         $obj->setETicketServiceArt(2);
 
         $res = '987654321;123456789;"title";"surname";"firstname";20170920;"12345";"remarks";20170921 115500;0;"identificationNumber";0;1;1;"creditCardNumber";;"remarks2";"remarks3";"division";"email";1;1;"eTicketEmailTelephone";1;3;2';
-        $this->assertEquals($res, (new SkiDataUserParser())->parseEntity($obj));
+        $this->assertEquals($res, (new UserParser())->parseEntity($obj));
     }
 
     /**
      * Tests the parseLine() method.
      *
      * @retrun void
+     * @throws Exception Throws an exception if an error occurs.
      */
-    public function testParseLine() {
+    public function testParseLine(): void {
 
         $obj = '987654321;123456789;"title";"surname";"firstname";20170920;"12345";"remarks";20170921 115500;0;"identificationNumber";0;1;1;"creditCardNumber";;"remarks2";"remarks3";"division";"email";1;1;"eTicketEmailTelephone";1;3;2';
 
-        $res = (new SkiDataUserParser())->parseLine($obj);
+        $res = (new UserParser())->parseLine($obj);
         $this->assertEquals(987654321, $res->getUserNumber());
         $this->assertEquals(123456789, $res->getCustomerNumber());
         $this->assertEquals("title", $res->getTitle());
@@ -105,5 +103,4 @@ final class SkidDataUserParserTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(3, $res->getETicketServiceTyp());
         $this->assertEquals(2, $res->getEticketServiceArt());
     }
-
 }
