@@ -11,8 +11,8 @@
 
 namespace WBW\Library\SkiData\Parser;
 
-use WBW\Library\Core\Argument\Exception\IntegerArgumentException;
-use WBW\Library\Core\Argument\Helper\IntegerHelper;
+use WBW\Library\Types\Exception\IntegerArgumentException;
+use WBW\Library\Types\Helper\IntegerHelper;
 use WBW\Library\SkiData\Exception\TooLongDataException;
 use WBW\Library\SkiData\Model\StartRecordFormat;
 
