@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [1.1.1](https://github.com/webeweb/skidata-library/tree/v1.1.1) (2021-08-12)
+
+- Update dependencies
+
 ### [1.1.0](https://github.com/webeweb/skidata-library/tree/v1.1.0) (2021-08-11)
 
 - Initial release
